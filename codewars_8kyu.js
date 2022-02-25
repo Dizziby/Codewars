@@ -96,3 +96,21 @@ function remove (string) {
 }
 
 // -----12-----
+function remove (string) {
+    let regExp = /!/g;
+    let newStr = string.replace(regExp,"");
+    newStr += "!";
+    return newStr;
+}
+
+// -----13-----
+function findNeedle(haystack) {
+    let i = haystack.indexOf("needle");
+    let string = `found the needle at position ${i}`;
+    return string;
+}
+
+// -----14-----
+function solution(str){
+    return str.split("").reverse().join("");
+}
