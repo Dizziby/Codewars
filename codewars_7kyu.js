@@ -12,3 +12,15 @@ function getCount(str) {
 
 
 // -----2-----
+function reverseWords(str) {
+    const arr = str.split(" ");
+    console.log(arr);
+    const newArr = []
+    arr.forEach(elem => newArr.push(elem.split("").reverse().join("")));
+    console.log(newArr);
+    return newArr.join(" ");
+
+}
+
+
+// -----3-----

@@ -114,3 +114,57 @@ function findNeedle(haystack) {
 function solution(str){
     return str.split("").reverse().join("");
 }
+
+// -----15-----
+function powersOfTwo(n){
+    const arr = [];
+    for(let i = 0; i <= n; i++) {
+        arr.push(Math.pow(2, i));
+    }
+    return arr;
+}
+
+// -----16-----
+function remainder(n, m){
+    let x, y;
+    if( n > m) {
+        x = n;
+        y = m;
+    } else {
+        y = n;
+        x = m;
+    }
+    let rem = x % y;
+    return rem;
+}
+
+// -----16-----
+function isPalindrome(x) {
+    const arr = x.split("");
+    console.log(arr);
+    const newArr = arr.reverse();
+    console.log(newArr);
+    let newX = newArr.join("");
+    console.log(newX);
+    return x.toLowerCase() === newX.toLowerCase() ? true : false;
+    // your code here
+}
+
+
+// -----17-----
+const reverseSeq = n => {
+    const arr = [];
+    for (let i = n; i > 0; i--) {
+        arr.push(i);
+    }
+    return arr;
+};
+
+
+// -----18-----
+function repeatStr (n, s) {
+    return s.repeat(n);
+}
+
+
+// -----19-----
