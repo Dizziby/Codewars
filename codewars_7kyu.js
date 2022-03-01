@@ -71,4 +71,54 @@ function vowelIndices(word){
 
 
 // -----7-----
+function validatePIN (pin) {
+    let regExp = /^\d{4}$|^\d{6}$/;
+    return regExp.test(pin);
+}
 
+
+// -----8-----
+function modifiedSum(a, n) {
+    return a.reduce((acc, cur) =>  acc + Math.pow(cur, n) - cur, 0);
+}
+
+
+// -----9-----
+function squareDigits(num){
+    const arr = String(num).split("");
+    const newArr = [];
+    arr.forEach(elem => newArr.push(Math.pow(Number(elem), 2)));
+    return +newArr.join("");
+}
+
+
+// -----10-----
+var isSquare = function(n){
+    let s = Math.sqrt(n);
+    if (n % s === 0 || n === 0) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+
+// -----11-----
+function getSum(a,b) {
+    let sum = 0;
+    if(a < b) {
+        for(let i = a; i <= b; i++) {
+            sum += i;
+        }
+    } else if (a > b) {
+        for(let i = b; i <= a; i++) {
+            sum += i;
+        }
+    } else {
+        sum = a;
+    }
+    return sum;
+}
+
+
+// -----12-----
