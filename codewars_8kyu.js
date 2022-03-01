@@ -168,3 +168,113 @@ function repeatStr (n, s) {
 
 
 // -----19-----
+function hello(name) {
+    console.log(name);
+    if(name !== "" && name !== undefined) {
+        let str = name[0].toUpperCase() + name.slice(1).toLowerCase();
+        return `Hello, ${str}\!`;
+    } else {
+        return "Hello, World!";
+    }
+}
+
+
+// -----20-----
+function even_or_odd(number) {
+    if(number % 2 === 0) {
+        return "Even"
+    } else {
+        return "Odd"
+    }
+}
+
+
+// -----21-----
+function positiveSum(arr) {
+    return arr.filter(elem => elem > 0).reduce((acc, elem) => acc + elem, 0);
+}
+
+
+// -----22-----
+function makeNegative(num) {
+    if(num <= 0) {
+        return num;
+    } else {
+        return num * (-1);
+    }
+}
+
+
+// -----23-----
+function opposite(number) {
+    return number * (-1);
+}
+
+
+// -----24-----
+function boolToWord( bool ){
+    return bool ? "Yes" : "No"
+}
+
+
+// -----25-----
+var summation = function (num) {
+    let result = 0;
+    for(let i = 1; i <= num; i++) {
+        result += i;
+    }
+    return result;
+}
+
+
+// -----26-----
+class SmallestIntegerFinder {
+    findSmallestInt(args) {
+        return Math.min(...args);
+    }
+}
+
+
+// -----27-----
+function countPositivesSumNegatives(input) {
+    if(input === null || input.length === 0) {
+        return [];
+    }
+    let isPositiv = 0;
+    let sumNegative = 0;
+    input.forEach(elem => {
+        if(elem > 0) {
+            isPositiv++;
+        } else {
+            sumNegative += elem;
+        }
+    })
+    return [isPositiv, sumNegative];
+}
+
+
+// -----28-----
+function noSpace(x){
+    return x.split(" ").join("");
+}
+
+
+// -----29-----
+function squareSum(numbers){
+    return numbers.reduce((acc, elem) => Math.pow(elem, 2) + acc, 0)
+}
+
+
+// -----30-----
+function countSheeps(arrayOfSheep) {
+    let counter = 0;
+    for(let i = 0; i < arrayOfSheep.length; i++) {
+        if(arrayOfSheep[i] === true) {
+            counter++;
+        }
+    }
+    return counter;
+}
+
+
+// -----31-----
