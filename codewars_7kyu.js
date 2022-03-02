@@ -122,3 +122,102 @@ function getSum(a,b) {
 
 
 // -----12-----
+function filter_list(l) {
+    const arr = l.filter(elem => typeof(elem) === 'number');
+    return arr;
+}
+
+
+// -----13-----
+function sumTwoSmallestNumbers(numbers) {
+    const arr = numbers.sort((a,b) => a - b);
+    return arr[0] + arr[1];
+}
+
+
+// -----14-----
+function getLargerNumbers(a, b) {
+    const newArr = [];
+    for(let i = 0; i < a.length; i++) {
+        if(a[i] >= b[i]) {
+            newArr.push(a[i]);
+        } else if (a[i] < b[i]) {
+            newArr.push(b[i]);
+        }
+    }
+    return newArr;
+}
+
+
+// -----15-----
+function openOrSenior(data){
+    const result = [];
+    data.forEach(elem => {
+        if(elem[0] >= 55 && elem[1] > 7) {
+            result.push("Senior")
+        } else {
+            result.push("Open")
+        }
+    })
+    return result;
+}
+
+
+// -----16-----
+function maskify(cc) {
+    const arr = cc.split("");
+    const newArr = [];
+    for(let i = 0; i < arr.length; i++) {
+        if (i < (arr.length - 4)) {
+            newArr.push("#");
+        } else {
+            newArr.push(arr[i]);
+        }
+    }
+    return newArr.join("");
+}
+
+
+// -----17-----
+function getMiddle(s) {
+    let newAtr = "";
+    if(s.length % 2 === 0) {
+        newStr = s[s.length/2 - 1] + s[s.length/2];
+    } else {
+        newStr = s[Math.floor(s.length/2)];
+    }
+    return newStr;
+}
+
+
+// -----18-----
+function descendingOrder(n){
+    const arr = String(n).split("");
+    const newArr = arr.sort((a, b) => b - a);
+    return Number(newArr.join(""));
+}
+
+
+// -----19-----
+function XO(str) {
+    let regExp1 = /x/gi;
+    let regExp2 = /o/gi;
+    const arr1 = str.match(regExp1);
+    const arr2 = str.match(regExp2);
+    if(arr1 === null && arr2 === null) {
+        return true
+    } else if(arr1 !== null && arr2 !== null && arr1.length === arr2.length) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+
+// -----20-----
+function friend(friends){
+    return friends.filter(elem => elem.length === 4)
+}
+
+
+// -----21-----
