@@ -278,3 +278,75 @@ function countSheeps(arrayOfSheep) {
 
 
 // -----31-----
+function take(arr, n) {
+    if(arr.length === 0) {
+        return arr;
+    }
+    if(n > arr.length) {
+        n = arr.length;
+    }
+    const newArr = [];
+    for(let i = 0; i < n; i++) {
+        newArr.push(arr[i]);
+    }
+    return newArr;
+}
+
+
+// -----32-----
+function usdcny(usd) {
+    return `${(usd * 6.75).toFixed(2)} Chinese Yuan`
+}
+
+
+// -----33-----
+function greet() {
+    return "hello world!"
+}
+
+
+// -----34-----
+function litres(time) {
+    return Math.floor(time * 0.5);
+}
+
+
+// -----35-----
+function century(year) {
+    // Finish this :)
+    return Math.ceil(year/100);
+}
+
+
+// -----36-----
+var stringToNumber = function(str){
+    return Number(str);
+}
+
+
+// -----37-----
+function basicOp(operation, value1, value2)
+{
+    return eval(`${value1} ${operation} ${value2}`);
+}
+
+
+// -----38-----
+function digitize(n) {
+    const arr = String(n).split("");
+    const newArr = [];
+    arr.forEach(elem => newArr.unshift(+elem))
+    return newArr;
+}
+
+
+// -----39-----
+function greet(name){
+    return `Hello, ${name} how are you doing today?`;
+}
+
+
+// -----40-----
+function maps(x){
+    return x.map(elem => elem * 2);
+}
