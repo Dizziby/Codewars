@@ -350,3 +350,97 @@ function greet(name){
 function maps(x){
     return x.map(elem => elem * 2);
 }
+
+
+// -----41-----
+function findDifference(a, b) {
+    let sum1 = a.reduce((acc, elem) => acc * elem, 1);
+    let sum2 = b.reduce((acc, elem) => acc * elem, 1);
+    if(sum1 > sum2) {
+        return (sum1-sum2)
+    } else {
+        return (sum1-sum2) * (-1);
+    }
+}
+
+
+// -----42-----
+var min = function(list){
+    list.sort((a,b) => a - b)
+    return list[0];
+}
+
+var max = function(list){
+    list.sort((a,b) => a - b)
+    return list[list.length - 1];
+}
+
+
+// -----43-----
+function between(a, b) {
+    const arr = [];
+    for(let i = a; i <= b; i++) {
+        arr.push(i);
+    }
+    return arr;
+}
+
+
+// -----44-----
+function reverseList(list) {
+    return list.reverse();
+}
+
+
+// -----45-----
+function invert(array) {
+    const newArr = [];
+    array.forEach((elem) => newArr.push(elem * (-1)));
+    return newArr;
+}
+
+
+// -----46-----
+function past(h, m, s){
+    return (h * 3600 + m * 60 + s) * 1000
+}
+
+
+// -----47-----
+function find_average(array) {
+    if(array.length === 0) {
+        return 0
+    }
+    const sum = array.reduce((acc, elem) => acc + elem, 0);
+    return sum/array.length;
+}
+
+
+// -----48-----
+function getAverage(marks){
+    if(marks.length === 0) {
+        return 0
+    }
+    const sum = marks.reduce((acc, elem) => acc + elem, 0);
+    return Math.floor(sum/marks.length);
+}
+
+
+// -----49-----
+function check(a, x) {
+    if(a.indexOf(x) === -1) {
+        return false;
+    } else {
+        return true
+    }
+}
+
+
+// -----50-----
+function paperwork(n, m) {
+    if(n < 0 || m < 0) {
+        return 0;
+    } else {
+        return n * m;
+    }
+}
