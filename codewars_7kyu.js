@@ -221,3 +221,102 @@ function friend(friends){
 
 
 // -----21-----
+function findNextSquare(sq) {
+    if(Math.sqrt(sq) === Math.floor(Math.sqrt(sq))) {
+        return Math.pow((Math.sqrt(sq) + 1), 2)
+    } else {
+        return -1;
+    }
+}
+
+
+// -----22-----
+var number = function(busStops){
+    let people = 0;
+    for(let i = 0; i < busStops.length; i++) {
+        people = people + busStops[i][0] - busStops[i][1];
+    }
+    return people;
+}
+
+
+// -----23-----
+var number=function(array){
+    const newArr = [];
+    if(array.length === 0) {
+        return newArr;
+    }
+    array.forEach((elem, index) => newArr.push(`${index + 1}: ${elem}`))
+    return newArr;
+}
+
+
+// -----24-----
+function sortByLength (array) {
+    return array.sort((a, b) => a.length - b.length)
+};
+
+
+// -----25-----
+function roundToNext5(n){
+    return Math.ceil(n/5) * 5;
+}
+
+
+// -----26-----
+function reverseLetter(str) {
+    let regExp = /[a-z]/g;
+    const arr = str.match(regExp);
+    return arr.reverse().join("");
+}
+
+
+// -----27-----
+function sumDigits(number) {
+    if(number < 0) {
+        number = number * (-1);
+    }
+    const arr = String(number).split("")
+    console.log(arr);
+    return arr.reduce((acc, elem) => acc + +elem, 0);
+}
+
+
+// -----28-----
+function checkExam(array1, array2) {
+    let points = 0;
+    for(let i = 0; i < array1.length; i++) {
+        if(array1[i] === array2[i]) {
+            points += 4;
+        } else if (array1[i] !== array2[i] && array2[i] !== "") {
+            points--;
+        }
+    }
+    if (points < 0) {
+        points = 0;
+    }
+    return points;
+}
+
+
+// -----29-----
+var capitals = function (word) {
+    const arr = [];
+    for(let i = 0; i < word.length; i++) {
+        if(word[i].toUpperCase() === word[i]) {
+            arr.push(i);
+        }
+    }
+    return arr;
+};
+
+
+// -----30-----
+function smallEnough(a, limit){
+    for(let i = 0; i < a.length; i++) {
+        if(a[i] > limit) {
+            return false;
+        }
+    }
+    return true;
+}
