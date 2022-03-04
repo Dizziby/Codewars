@@ -444,3 +444,37 @@ function paperwork(n, m) {
         return n * m;
     }
 }
+
+
+// -----51-----
+function smash (words) {
+    return words.join(" ")
+};
+
+
+// -----52-----
+function doubleInteger(i) {
+    return i * 2;
+}
+
+
+// -----53-----
+function booleanToString(b){
+    return String(b);
+}
+
+
+// -----54-----
+function greet(name){
+    if(name === "Johnny") {
+        return "Hello, my love!";
+    } else {
+        return "Hello, " + name + "!";
+    }
+}
+
+
+// -----55-----
+function makeUpperCase(str) {
+    return str.toUpperCase();
+}
