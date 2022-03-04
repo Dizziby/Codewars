@@ -320,3 +320,43 @@ function smallEnough(a, limit){
     }
     return true;
 }
+
+
+// -----31-----
+function sum(...args) {
+    return args.reduce((acc, el) => acc + el, 0)
+}
+
+
+// -----32-----
+function findShort(s){
+    const arr = s.split(" ");
+    const arrSort = arr.sort((a, b) => a.length - b.length);
+    return arrSort[0].length;
+}
+
+
+// -----33-----
+function remove (string) {
+    let regExp = /!*$/;
+    const arr = string.split(" ");
+    const arrNew = [];
+    for(let i = 0; i < arr.length; i++) {
+        arrNew.push(arr[i].replace(regExp,""));
+    }
+    return arrNew.join(" ");
+}
+
+
+// -----34-----
+function disemvowel(str) {
+    return str.replace(/[aeuoi]/gi, "");
+}
+
+
+// -----35-----
+String.prototype.toJadenCase = function () {
+    const arr = this.split(" ");
+    const newArr = arr.map(el => el[0].toUpperCase() + el.slice(1));
+    return newArr.join(" ");
+};
