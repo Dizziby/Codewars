@@ -478,3 +478,72 @@ function greet(name){
 function makeUpperCase(str) {
     return str.toUpperCase();
 }
+
+
+// -----56-----
+function fakeBin(x){
+    let newString = "";
+    for (let el of x) {
+        if(el < 5) {
+            newString += "0";
+        } else {
+            newString += "1";
+        }
+    }
+    return newString;
+}
+
+
+// -----57-----
+function hero(bullets, dragons){
+    if(bullets >= 2 * dragons) {
+        return true
+    } else {
+        return false
+    }
+}
+
+
+// -----58-----
+function bmi(weight, height) {
+    let bmi = weight / Math.pow(height, 2);
+    switch (true) {
+        case bmi <= 18.5:
+            return "Underweight";
+            break;
+        case bmi <= 25:
+            return "Normal";
+            break;
+        case bmi <= 30:
+            return "Overweight";
+            break;
+        default:
+            return "Obese";
+            break;
+    }
+}
+
+
+// -----59-----
+function DNAtoRNA(dna) {
+    let rna = "";
+    for(el of dna) {
+        if(el === "T") {
+            rna += "U"
+        } else {
+            rna += el
+        }
+    }
+    return rna
+}
+
+
+// -----60-----
+function sum (numbers) {
+    "use strict";
+    if(numbers.length === 0) {
+        return 0;
+    } else {
+        return numbers.reduce((acc, el) => acc + el, 0);
+    }
+};
