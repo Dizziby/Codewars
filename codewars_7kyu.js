@@ -360,3 +360,200 @@ String.prototype.toJadenCase = function () {
     const newArr = arr.map(el => el[0].toUpperCase() + el.slice(1));
     return newArr.join(" ");
 };
+
+
+// -----36-----
+function getDivisorsCnt(n){
+    let counter = 0;
+    for(let i = 0; i <= n; i++) {
+        if(n % i === 0) {
+            counter++;
+        }
+    }
+    return counter;
+}
+
+
+// -----37-----
+function getEvenNumbers(numbersArray){
+    return numbersArray.filter(el => el % 2 === 0)
+}
+
+
+// -----38-----
+"use strict";
+function flattenAndSort(array) {
+    const newArr = [].concat(...array);
+    return newArr.sort((a,b) => a - b);
+}
+
+
+// -----39-----
+function shorter_reverse_longer(a,b){
+    let newString = "";
+    if(a.length >= b.length) {
+        const arr = a.split("");
+        let newA = arr.reverse().join("");
+        newString = b+newA+b;
+    } else {
+        const arr = b.split("");
+        let newB = arr.reverse().join("");
+        newString = a+newB+a;
+    }
+    return newString;
+}
+
+
+// -----40-----
+function isPowerOfTwo(n){
+    if (n < 1) {
+        return false;
+    } else if (n === 1) {
+        return true;
+    } else {
+        if(n / 2 === 2) {
+            return true;
+        } else {
+            return isPowerOfTwo(n/2);
+        }
+    }
+}
+
+
+// -----41-----
+function solution(nums){
+    if(nums === null || nums.length === 0) {
+        return [];
+    } else {
+        return nums.sort((a, b) => a - b);
+    }
+}
+
+
+// -----42-----
+function isIsogram(str){
+    if (str.length === 0) {
+        return true;
+    }
+    const arr = [];
+    for (let el of str) {
+        let elLowerCase = el.toLowerCase();
+        if(arr.indexOf(elLowerCase) === -1) {
+            arr.push(elLowerCase);
+        } else {
+            return false;
+        }
+    }
+    return true;
+}
+
+
+// -----43-----
+function DNAStrand(dna){
+    let newStr = "";
+    for (let el of dna) {
+        switch (el) {
+            case "A":
+                newStr += "T";
+                break;
+            case "T":
+                newStr += "A";
+                break;
+            case "G":
+                newStr += "C";
+                break;
+            case "C":
+                newStr += "G";
+                break;
+        }
+    }
+    return newStr;
+}
+
+
+// -----44-----
+function oddOrEven(array) {
+    let sum = array.reduce((acc, el) => acc + el, 0)
+    if(sum % 2 === 0) {
+        return "even"
+    } else {
+        return "odd"
+    }
+}
+
+
+// -----45-----
+function noOdds( values ){
+    const arr = [];
+    for (let value of values) {
+        if(value % 2 === 0) {
+            arr.push(value)
+        }
+    }
+    return arr;
+}
+
+
+// -----46-----
+function orderFood(list) {
+    const results = {};
+    list.forEach(el => {
+        if(results[el.meal] === undefined) {
+            results[el.meal] = 1;
+        } else {
+            results[el.meal]++;
+        }
+    });
+    return results;
+}
+
+
+// -----47-----
+function findSum(n) {
+    let sum = 0;
+    for(let i = 1; i <= n; i++) {
+        if(i % 3 === 0 || i % 5 === 0) {
+            sum += i;
+        }
+    }
+    return sum;
+}
+
+
+// -----48-----
+function rowWeights(array){
+    let sum1 = 0;
+    let sum2 = 0;
+    array.forEach((el, index) => {
+        if(index % 2 == 0) {
+            sum1 += el;
+        } else {
+            sum2 += el;
+        }
+    })
+    return [sum1, sum2];
+}
+
+
+// -----49-----
+function cookingTime(eggs) {
+    let saucepan = Math.floor(eggs / 8)
+    if (eggs === 0) {
+        return 0;
+    } else if (eggs % 8 === 0) {
+        return saucepan * 5;
+    } else {
+        return saucepan * 5 + 5;
+    }
+}
+
+
+// -----50-----
+function bump(x){
+    const arr = x.match(/n/gi);
+    if(arr === null || arr.length <= 15) {
+        return "Woohoo!"
+    } else {
+        return "Car Dead"
+    }
+}
