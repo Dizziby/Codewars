@@ -51,3 +51,64 @@ function createPhoneNumber(numbers){
 
 
 // -----5-----
+function narcissistic(value) {
+    const arr = String(value).split("");
+    let newValue = arr.reduce((acc, el) => acc + Math.pow(Number(el), String(value).length), 0);
+    console.log(String(value).length);
+    if(value === newValue) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+
+// -----6-----
+function likes(names) {
+    switch (names.length) {
+        case 0:
+            return "no one likes this";
+            break;
+        case 1:
+            return `${names[0]} likes this`;
+            break;
+        case 2:
+            return `${names[0]} and ${names[1]} like this`;
+            break;
+        case 3:
+            return `${names[0]}, ${names[1]} and ${names[2]} like this`;
+            break;
+        default:
+            return `${names[0]}, ${names[1]} and ${names.length - 2} others like this`;
+            break;
+    }
+}
+
+
+// -----7-----
+function solution(number){
+    let counter = 0;
+    if(number <= 0) {
+        return 0
+    } else {
+        for (let i = 1; i < number; i++) {
+            if(i % 3 === 0 || i % 5 === 0) {
+                counter += i;
+            }
+        }
+    }
+    return counter;
+}
+
+
+// -----8-----
+function solution(str){
+    if(str.length % 2 !== 0) {
+        str += "_";
+    }
+    let newArr = [];
+    for(let i = 0; i < str.length; i += 2) {
+        newArr.push(str.slice(i, i + 2));
+    }
+    return newArr;
+}
