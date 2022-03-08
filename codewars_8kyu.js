@@ -547,3 +547,48 @@ function sum (numbers) {
         return numbers.reduce((acc, el) => acc + el, 0);
     }
 };
+
+
+// -----61-----
+function gooseFilter (birds) {
+    var geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"];
+    for(let i = 0; i < geese.length; i++) {
+        birds = birds.filter(el => {
+            if(el === geese[i]) {
+                return false
+            } else {
+                return true
+            }
+        })
+    }
+    return birds;
+}
+
+
+// -----62-----
+function squareArea(A){
+    return (Math.floor(Math.pow((A*2/Math.PI), 2)*100))/100;
+}
+
+
+// -----63-----
+function oddCount(n){
+    return Math.floor(n/2);
+}
+
+
+// -----64-----
+function arrayPlusArray(arr1, arr2) {
+    const newArr = arr1.concat(arr2);
+    return newArr.reduce((acc, el) => acc + el, 0);
+}
+
+
+// -----65-----
+function monkeyCount(n) {
+    const arr = [];
+    for(let i = 1; i <= n; i++) {
+        arr.push(i);
+    }
+    return arr;
+}
