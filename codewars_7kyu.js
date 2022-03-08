@@ -557,3 +557,51 @@ function bump(x){
         return "Car Dead"
     }
 }
+
+
+// -----51-----
+function nbYear(p0, percent, aug, p) {
+    let i = 0;
+    while (p0 < p) {
+        p0 = p0 + Math.floor(percent * p0 *0.01) + aug;
+        i++;
+    }
+    return i;
+}
+
+
+// -----52-----
+function minMax(arr){
+    const newArr = arr.sort((a, b) => a - b);
+    return [newArr[0],newArr[newArr.length - 1]]; // fix me!
+}
+
+
+// -----53-----
+function removeDuplicateWords (s) {
+    const arr = s.split(" ");
+    const newArr =[];
+    for(let i = 0; i < arr.length; i++) {
+        if(newArr.indexOf(arr[i]) === -1) {
+            newArr.push(arr[i]);
+        }
+    }
+    return newArr.join(" ");
+}
+
+
+// -----54-----
+function reverseNumber(n) {
+    if(n >= 0) {
+        return Number(String(n).split("").reverse().join(""));
+    } else {
+        return (-1) * Number(String((-1) * n).split("").reverse().join(""));
+    }
+}
+
+
+// -----55-----
+function evenNumbers(array, number) {
+    const newArr = array.filter(el => el % 2 === 0);
+    return newArr.splice(newArr.length - number, number)
+}
