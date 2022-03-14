@@ -592,3 +592,98 @@ function monkeyCount(n) {
     }
     return arr;
 }
+
+
+// -----66-----
+function lovefunc(flower1, flower2){
+    if(flower1 % 2 === 0 && flower2 % 2 !== 0 || flower1 % 2 !== 0 && flower2 % 2 === 0) {
+        return true
+    } else {
+        return false
+    }
+}
+
+
+// -----67-----
+function grow(x){
+    return x.reduce((acc, el) => acc * el, 1)
+}
+
+
+// -----68-----
+function simpleMultiplication(number) {
+    if(number % 2 === 0) {
+        return number * 8
+    } else {
+        return number * 9
+    }
+}
+
+
+// -----69-----
+function rentalCarCost(d) {
+    if(d >= 7) {
+        return d * 40 - 50
+    } else if (d >= 3 && d < 7) {
+        return d * 40 - 20
+    } else {
+        return d * 40
+    }
+}
+
+
+// -----70-----
+function betterThanAverage(classPoints, yourPoints) {
+    let middle = classPoints.reduce((acc, el) => acc + el, yourPoints);
+    if(yourPoints >= (middle / (classPoints.length + 1))) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+
+// -----71-----
+function pillars(num_pill, dist, width) {
+    if (num_pill === 1) {
+        return 0;
+    } else {
+        return (num_pill - 1) * dist * 100 + width * (num_pill - 2);
+    }
+}
+
+
+// -----72-----
+function bonusTime(salary, bonus) {
+    if(bonus) {
+        return `\u00A3${salary * 10}`
+    } else {
+        return `\u00A3${salary}`
+    }
+}
+
+
+// -----73-----
+function isDivideBy(number, a, b) {
+    if(number % a === 0 && number % b === 0) {
+        return true
+    } else {
+        return false
+    }
+}
+
+
+// -----74-----
+function sumMix(x){
+    return x.reduce((acc, el) => acc + +el, 0)
+}
+
+
+// -----75-----
+var countSheep = function (num){
+    let str = "";
+    for(let i = 1; i <= num; i++) {
+        str += `${i} sheep...`
+    }
+    return str
+}
