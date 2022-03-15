@@ -687,3 +687,58 @@ var countSheep = function (num){
     }
     return str
 }
+
+
+// -----76-----
+function doubleChar(str) {
+    const arr = str.split("");
+    const newArr =  arr.map(el => el.repeat(2));
+    return newArr.join("");
+}
+
+
+// -----77-----
+function enough(cap, on, wait) {
+    if (cap - on - wait >= 0) {
+        return 0
+    } else {
+        return (cap - on - wait) * (-1)
+    }
+}
+
+
+// -----78-----
+function feast(beast, dish) {
+    if(beast[0] === dish[0] && beast[beast.length - 1] === dish[dish.length - 1]) {
+        return true
+    } else {
+        return false
+    }
+}
+
+
+// -----79-----
+function divisibleBy(numbers, divisor){
+    return numbers.filter(el => el % divisor === 0)
+}
+
+
+// -----80-----
+function getGrade (s1, s2, s3) {
+    let sum = (s1 + s2 + s3) / 3
+    if(sum >= 90 && sum <= 100) {
+        return "A"
+    }
+    if(sum >= 80 && sum < 90) {
+        return "B"
+    }
+    if(sum >= 70 && sum < 80) {
+        return "C"
+    }
+    if(sum >= 60 && sum < 70) {
+        return "D"
+    }
+    if(sum >= 0 && sum < 60) {
+        return "F"
+    }
+}
