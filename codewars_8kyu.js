@@ -742,3 +742,51 @@ function getGrade (s1, s2, s3) {
         return "F"
     }
 }
+
+
+// -----81-----
+function countBy(x, n) {
+    let z = [];
+    for(let i = 1; z.length < n; i++) {
+        if(i % x === 0) {
+            z.push(i);
+        }
+    }
+    return z;
+}
+
+
+// -----82-----
+function index(array, n){
+    if(n > array.length - 1) {
+        return -1
+    } else {
+        return Math.pow(array[n], n)
+    }
+}
+
+
+// -----83-----
+function checkAlive (health) {
+    if (health <= 0) {
+        return false
+    } else  {
+        return true
+    }
+}
+
+
+// -----84-----
+function generateRange(min, max, step){
+    const arr = [];
+    for(let i = min; i <= max; i += step) {
+        arr.push(i);
+    }
+    return arr;
+}
+
+
+// -----85-----
+function capitalizeWord(word) {
+    return word[0].toUpperCase() + word.slice(1);
+}
