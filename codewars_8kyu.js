@@ -790,3 +790,69 @@ function generateRange(min, max, step){
 function capitalizeWord(word) {
     return word[0].toUpperCase() + word.slice(1);
 }
+
+
+// -----86-----
+function stringToArray(string){
+    return string.split(" ");
+}
+
+
+// -----87-----
+function removeExclamationMarks(s) {
+    return s.replace(/!/g, "");
+}
+
+
+// -----88-----
+function areYouPlayingBanjo(name) {
+    const regExp = /^r/gi;
+    if(regExp.test(name)) {
+        return `${name} plays banjo`;
+    } else {
+        return `${name} does not play banjo`;
+    }
+}
+
+
+// -----89-----
+function getPlanetName(id){
+    var name;
+    switch(id){
+        case 1:
+            name = 'Mercury'
+            break
+        case 2:
+            name = 'Venus'
+            break
+        case 3:
+            name = 'Earth'
+            break
+        case 4:
+            name = 'Mars'
+            break
+        case 5:
+            name = 'Jupiter'
+            break
+        case 6:
+            name = 'Saturn'
+            break
+        case 7:
+            name = 'Uranus'
+            break
+        case 8:
+            name = 'Neptune'
+            break
+    }
+    return name;
+}
+
+
+// -----90-----
+function problem(x){
+    if(typeof x === "string") {
+        return "Error"
+    } else {
+        return x * 50 + 6
+    }
+}
