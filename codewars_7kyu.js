@@ -605,3 +605,56 @@ function evenNumbers(array, number) {
     const newArr = array.filter(el => el % 2 === 0);
     return newArr.splice(newArr.length - number, number)
 }
+
+
+// -----56-----
+function gimme (triplet) {
+    const arr = [...triplet];
+    arr.sort((a, b) => a - b);
+    return triplet.indexOf(arr[1]);
+}
+
+
+// -----57-----
+function solve(s){
+    let upper = 0;
+    let lower = 0;
+    for(let i = 0; i < s.length; i++) {
+        if (s[i].toLowerCase() === s[i]) {
+            lower++
+        } else {
+            upper++
+        }
+    }
+    if(upper > lower) {
+        return s.toUpperCase()
+    } else {
+        return s.toLowerCase()
+    }
+}
+
+
+// -----58-----
+function minValue(values){
+    const arr = [];
+    values.forEach(el => {
+        if(arr.indexOf(el) === -1) {
+            arr.push(el)
+        }
+    })
+    const arrSort = arr.sort((a,b) => a - b)
+    return +arrSort.join("")
+}
+
+
+// -----59-----
+function sortGiftCode(code){
+    return code.split("").sort().join("")
+}
+
+
+// -----60-----
+function digitize(n) {
+    const arr = String(n).split("")
+    return arr.map(el => +el)
+}
