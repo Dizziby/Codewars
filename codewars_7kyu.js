@@ -658,3 +658,63 @@ function digitize(n) {
     const arr = String(n).split("")
     return arr.map(el => +el)
 }
+
+
+// -----61-----
+function hydrate(s) {
+    const arr = s.match(/\d+/g);
+    let num = arr.reduce((acc, el) => acc + +el, 0)
+    if(num === 1) {
+        return num + " glass of water"
+    } else {
+        return num + " glasses of water"
+    }
+}
+
+
+// -----62-----
+function longest(s1, s2) {
+    let str = s1 + s2;
+    const arr = str.split("").sort();
+    const newArr = [];
+    arr.forEach(el => {
+        if(newArr.indexOf(el) === -1) {
+            newArr.push(el)
+        }
+    })
+    return newArr.join("")
+}
+
+
+// -----63-----
+function stray(numbers) {
+    if(numbers[0] === numbers[1]) {
+        return numbers.filter(el => el !== numbers[0])[0]
+    } else if(numbers[0] === numbers[2]) {
+        return numbers[1]
+    } else {
+        return numbers[0]
+    }
+}
+
+
+// -----64-----
+function printerError(s) {
+    const err = s.match(/[n-z]/g) || [];
+    return `${err.length}/${s.length}`
+}
+
+
+// -----65-----
+const sequenceSum = (begin, end, step) => {
+    if(begin > end) {
+        return 0
+    } else if(begin === end) {
+        return begin
+    }
+    let sum = 0;
+    for(let i = begin; i <= end; i += step) {
+        sum += i;
+    }
+    return sum;
+};
