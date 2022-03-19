@@ -856,3 +856,52 @@ function problem(x){
         return x * 50 + 6
     }
 }
+
+
+// -----91-----
+class Kata {
+    static getVolumeOfCuboid(length, width, height) {
+        return length * width * height
+    }
+}
+
+
+// -----92-----
+function testEven(n) {
+    if(n % 2 === 0) {
+        return true
+    } else {
+        return false
+    }
+}
+
+
+// -----93-----
+function defineSuit(card) {
+    switch(card[card.length - 1]) {
+        case "♣":
+            return 'clubs';
+            break;
+        case "♦":
+            return 'diamonds';
+            break;
+        case "♥":
+            return 'hearts';
+            break;
+        case "♠":
+            return 'spades';
+            break;
+    }
+}
+
+
+// -----94-----
+function remove(string) {
+    return string.replace(/\!+$/g, "");
+}
+
+
+// -----95-----
+function shortcut (string) {
+    return string.replace(/[aeiou]/gi, "");
+}
