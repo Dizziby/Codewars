@@ -112,3 +112,37 @@ function solution(str){
     }
     return newArr;
 }
+
+
+// -----9-----
+function findOdd(A) {
+    const count = {};
+    for(let el of A) {
+        if(count[el] === undefined) {
+            count[el] = 1
+        } else {
+            count[el]++
+        }
+    }
+    for(let key  in count) {
+        if(count[key] % 2 !== 0) {
+            return +key
+        }
+    }
+}
+
+
+// -----10-----
+var uniqueInOrder=function(iterable){
+    if(iterable.length === 0) {
+        return []
+    }
+    const arr = [];
+    arr.push(iterable[0])
+    for(let i = 1; i < iterable.length; i++) {
+        if(iterable[i] !== iterable[i-1]) {
+            arr.push(iterable[i])
+        }
+    }
+    return arr
+}
