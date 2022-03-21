@@ -146,3 +146,41 @@ var uniqueInOrder=function(iterable){
     }
     return arr
 }
+
+
+// -----11-----
+function findUniq(arr) {
+    const arrSort = arr.sort((a,b) => a - b)
+    if (arrSort[0] === arrSort[1]) {
+        return arrSort[arrSort.length - 1]
+    } else if (arrSort[0] !== arrSort[1] && arrSort[1] === arrSort[2]) {
+        return arrSort[0]
+    } else if (arrSort[0] !== arrSort[1] && arrSort[0] === arrSort[2]) {
+        return arrSort[1]
+    }
+}
+
+
+// -----12-----
+function sortArray(array) {
+    const newArray = []
+    array.forEach(el => {
+        if(el % 2 !== 0) {
+            newArray.push(el)
+        }
+    })
+    const newArraySort = newArray.sort((a,b) => a - b)
+    console.log(newArraySort)
+    const resultArr = [];
+    let i = 0;
+    array.forEach(el => {
+        if(el % 2 !== 0) {
+            resultArr.push(newArraySort[i]);
+            i++
+            console.log(i)
+        } else {
+            resultArr.push(el)
+        }
+    })
+    return resultArr
+}
