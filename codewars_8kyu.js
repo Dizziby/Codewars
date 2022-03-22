@@ -905,3 +905,46 @@ function remove(string) {
 function shortcut (string) {
     return string.replace(/[aeiou]/gi, "");
 }
+
+
+// -----96-----
+function solution(a, b){
+    if(a.length > b.length) {
+        return b + a + b
+    } else {
+        return a + b + a
+    }
+}
+
+
+// -----97-----
+function greet (name, owner) {
+    if(name === owner) {
+        return "Hello boss"
+    } else {
+        return "Hello guest"
+    }
+}
+
+
+// -----98-----
+function cockroachSpeed(s) {
+    return Math.floor(s * 100000 / 3600)
+}
+
+
+// -----99-----
+function setAlarm(employed, vacation){
+    if(vacation === true) {
+        return false
+    } else if(vacation === false && employed === false) {
+        return false
+    }
+    return true
+}
+
+
+// -----100-----
+function otherAngle(a, b) {
+    return 180 - a - b;
+}
