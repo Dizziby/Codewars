@@ -948,3 +948,77 @@ function setAlarm(employed, vacation){
 function otherAngle(a, b) {
     return 180 - a - b;
 }
+
+
+// -----101-----
+String.prototype.toAlternatingCase = function () {
+    let newStr = ""
+    for(let i = 0; i < this.length; i++) {
+        if(this[i].toUpperCase() ===  this[i]) {
+            newStr += this[i].toLowerCase()
+        } else {
+            newStr += this[i].toUpperCase()
+        }
+    }
+    return newStr
+}
+
+
+// -----102-----
+const quarterOf = (month) => {
+    if(month <= 3) {
+        return 1
+    } else if(month <= 6) {
+        return 2
+    } else if(month <= 9) {
+        return 3
+    }
+    return 4
+}
+
+
+// -----103-----
+function hoopCount (n) {
+    if(n >= 10) {
+        return "Great, now move on to tricks"
+    }
+    return "Keep at it until you get it"
+}
+
+
+// -----104-----
+function greet(language) {
+    const obj = {
+        english: 'Welcome',
+        czech: 'Vitejte',
+        danish: 'Velkomst',
+        dutch: 'Welkom',
+        estonian: 'Tere tulemast',
+        finnish: 'Tervetuloa',
+        flemish: 'Welgekomen',
+        french: 'Bienvenue',
+        german: 'Willkommen',
+        irish: 'Failte',
+        italian: 'Benvenuto',
+        latvian: 'Gaidits',
+        lithuanian: 'Laukiamas',
+        polish: 'Witamy',
+        spanish: 'Bienvenido',
+        swedish: 'Valkommen',
+        welsh: 'Croeso'
+    }
+    for(let key in obj) {
+        if(language === key) {
+            return obj[key]
+        }
+    }
+    return 'Welcome'
+}
+
+
+// -----105-----
+function strCount(str, letter){
+    let regExp = new RegExp (letter, "g")
+    const arr = str.match(regExp) || []
+    return arr.length
+}
