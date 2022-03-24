@@ -1022,3 +1022,79 @@ function strCount(str, letter){
     const arr = str.match(regExp) || []
     return arr.length
 }
+
+
+// -----106-----
+function switchItUp(number){
+    switch(number) {
+        case 1: return "One"
+            break
+        case 2: return "Two"
+            break
+        case 3: return "Three"
+            break
+        case 4: return "Four"
+            break
+        case 5: return "Five"
+            break
+        case 6: return "Six"
+            break
+        case 7: return "Seven"
+            break
+        case 8: return "Eight"
+            break
+        case 9: return "Nine"
+            break
+        case 0: return "Zero"
+            break
+    }
+}
+
+
+// -----107-----
+function findLongest(str) {
+
+    var spl = str.split(" ");
+    var longest = 0
+
+    for (var i = 0; i < spl.length; i++) {
+        if (spl[i].length > longest) {
+            longest = spl[i].length
+        }
+    }
+    return longest
+}
+
+
+// -----108-----
+function createArray(number){
+    var newArray = [];
+
+    for(var counter = 1; counter <= number; counter++){
+        newArray.push(counter);
+    }
+
+    return newArray;
+}
+
+
+// -----109-----
+function getAge(inputString){
+    return +inputString[0]
+}
+
+
+// -----110-----
+var humanYearsCatYearsDogYears = function(humanYears) {
+    let catYears = 0;
+    let dogYears = 0;
+    if(humanYears === 1) {
+        return [1, 15, 15]
+    } else if(humanYears === 2) {
+        return [2, 24, 24]
+    } else if (humanYears >=3) {
+        catYears = 15 + 9 + 4 * (humanYears - 2)
+        dogYears = 15 + 9 + 5 * (humanYears - 2)
+    }
+    return [humanYears, catYears, dogYears]
+}
