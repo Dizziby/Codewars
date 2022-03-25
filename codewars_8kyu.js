@@ -1098,3 +1098,44 @@ var humanYearsCatYearsDogYears = function(humanYears) {
     }
     return [humanYears, catYears, dogYears]
 }
+
+
+// -----111-----
+function multipleOfIndex(array) {
+    return array.filter((el, index) => el % index === 0)
+}
+
+
+// -----112-----
+function peopleWithAgeDrink(old) {
+    switch(true) {
+        case old < 14: return "drink toddy";
+            break;
+        case old < 18: return "drink coke";
+            break;
+        case old < 21: return "drink beer";
+            break;
+        default : return "drink whisky";
+            break;
+    }
+};
+
+
+// -----113-----
+function orderOperations () {
+    return (2 + 2) * (2 + 2) * 2
+}
+
+
+// -----114-----
+function typeOfSum(a, b) {
+    return typeof(a + b)
+}
+
+
+// -----115-----
+class Cat extends Animal {
+    speak() {
+        return this.name + " meows."
+    }
+}
