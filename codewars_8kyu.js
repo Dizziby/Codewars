@@ -1139,3 +1139,37 @@ class Cat extends Animal {
         return this.name + " meows."
     }
 }
+
+
+// -----116-----
+function multiply(a, b) {
+    return a * b
+}
+
+
+// -----117-----
+function aspectRatio(x,y){
+    return [Math.ceil(y*16/9), y]
+}
+
+
+// -----118-----
+function preFizz(n) {
+    const arr = []
+    for(let i = 1; i <= n; i++) {
+        arr.push(i)
+    }
+    return arr
+}
+
+
+// -----119-----
+var replaceDots = function(str) {
+    return str.replace(/\./g, "-");
+}
+
+
+// -----120-----
+function dutyFree(normPrice, discount, hol){
+    return Math.floor(hol/(normPrice*discount/100))
+}
