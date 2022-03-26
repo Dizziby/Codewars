@@ -24,7 +24,7 @@ function reverseWords(str) {
 
 
 // -----3-----
-function highAndLow(numbers){
+function highAndLow(numbers) {
     const arr = numbers.split(" ");
     let max = Math.max.apply(null, arr);
     let min = Math.min.apply(null, arr);
@@ -36,7 +36,7 @@ function highAndLow(numbers){
 function matrix(array) {
     array.forEach((elem, index) => {
         for (let i = 0; i < elem.length; i++) {
-            if(index === i && elem[i] < 0) {
+            if (index === i && elem[i] < 0) {
                 elem[i] = 0;
             } else if (index === i) {
                 elem[i] = 1;
@@ -57,13 +57,13 @@ function vaporcode(string) {
 
 
 // -----6-----
-function vowelIndices(word){
+function vowelIndices(word) {
     let regExp = /[aeiouy]/i;
     const arr = word.split("");
     const results = [];
-    for(let i = 0; i < arr.length; i++) {
-        if(regExp.test(arr[i])) {
-            results.push(i+1);
+    for (let i = 0; i < arr.length; i++) {
+        if (regExp.test(arr[i])) {
+            results.push(i + 1);
         }
     }
     return results;
@@ -71,7 +71,7 @@ function vowelIndices(word){
 
 
 // -----7-----
-function validatePIN (pin) {
+function validatePIN(pin) {
     let regExp = /^\d{4}$|^\d{6}$/;
     return regExp.test(pin);
 }
@@ -79,12 +79,12 @@ function validatePIN (pin) {
 
 // -----8-----
 function modifiedSum(a, n) {
-    return a.reduce((acc, cur) =>  acc + Math.pow(cur, n) - cur, 0);
+    return a.reduce((acc, cur) => acc + Math.pow(cur, n) - cur, 0);
 }
 
 
 // -----9-----
-function squareDigits(num){
+function squareDigits(num) {
     const arr = String(num).split("");
     const newArr = [];
     arr.forEach(elem => newArr.push(Math.pow(Number(elem), 2)));
@@ -93,7 +93,7 @@ function squareDigits(num){
 
 
 // -----10-----
-var isSquare = function(n){
+var isSquare = function (n) {
     let s = Math.sqrt(n);
     if (n % s === 0 || n === 0) {
         return true;
@@ -104,14 +104,14 @@ var isSquare = function(n){
 
 
 // -----11-----
-function getSum(a,b) {
+function getSum(a, b) {
     let sum = 0;
-    if(a < b) {
-        for(let i = a; i <= b; i++) {
+    if (a < b) {
+        for (let i = a; i <= b; i++) {
             sum += i;
         }
     } else if (a > b) {
-        for(let i = b; i <= a; i++) {
+        for (let i = b; i <= a; i++) {
             sum += i;
         }
     } else {
@@ -123,14 +123,14 @@ function getSum(a,b) {
 
 // -----12-----
 function filter_list(l) {
-    const arr = l.filter(elem => typeof(elem) === 'number');
+    const arr = l.filter(elem => typeof (elem) === 'number');
     return arr;
 }
 
 
 // -----13-----
 function sumTwoSmallestNumbers(numbers) {
-    const arr = numbers.sort((a,b) => a - b);
+    const arr = numbers.sort((a, b) => a - b);
     return arr[0] + arr[1];
 }
 
@@ -138,8 +138,8 @@ function sumTwoSmallestNumbers(numbers) {
 // -----14-----
 function getLargerNumbers(a, b) {
     const newArr = [];
-    for(let i = 0; i < a.length; i++) {
-        if(a[i] >= b[i]) {
+    for (let i = 0; i < a.length; i++) {
+        if (a[i] >= b[i]) {
             newArr.push(a[i]);
         } else if (a[i] < b[i]) {
             newArr.push(b[i]);
@@ -150,10 +150,10 @@ function getLargerNumbers(a, b) {
 
 
 // -----15-----
-function openOrSenior(data){
+function openOrSenior(data) {
     const result = [];
     data.forEach(elem => {
-        if(elem[0] >= 55 && elem[1] > 7) {
+        if (elem[0] >= 55 && elem[1] > 7) {
             result.push("Senior")
         } else {
             result.push("Open")
@@ -167,7 +167,7 @@ function openOrSenior(data){
 function maskify(cc) {
     const arr = cc.split("");
     const newArr = [];
-    for(let i = 0; i < arr.length; i++) {
+    for (let i = 0; i < arr.length; i++) {
         if (i < (arr.length - 4)) {
             newArr.push("#");
         } else {
@@ -181,17 +181,17 @@ function maskify(cc) {
 // -----17-----
 function getMiddle(s) {
     let newAtr = "";
-    if(s.length % 2 === 0) {
-        newStr = s[s.length/2 - 1] + s[s.length/2];
+    if (s.length % 2 === 0) {
+        newStr = s[s.length / 2 - 1] + s[s.length / 2];
     } else {
-        newStr = s[Math.floor(s.length/2)];
+        newStr = s[Math.floor(s.length / 2)];
     }
     return newStr;
 }
 
 
 // -----18-----
-function descendingOrder(n){
+function descendingOrder(n) {
     const arr = String(n).split("");
     const newArr = arr.sort((a, b) => b - a);
     return Number(newArr.join(""));
@@ -204,9 +204,9 @@ function XO(str) {
     let regExp2 = /o/gi;
     const arr1 = str.match(regExp1);
     const arr2 = str.match(regExp2);
-    if(arr1 === null && arr2 === null) {
+    if (arr1 === null && arr2 === null) {
         return true
-    } else if(arr1 !== null && arr2 !== null && arr1.length === arr2.length) {
+    } else if (arr1 !== null && arr2 !== null && arr1.length === arr2.length) {
         return true;
     } else {
         return false;
@@ -215,14 +215,14 @@ function XO(str) {
 
 
 // -----20-----
-function friend(friends){
+function friend(friends) {
     return friends.filter(elem => elem.length === 4)
 }
 
 
 // -----21-----
 function findNextSquare(sq) {
-    if(Math.sqrt(sq) === Math.floor(Math.sqrt(sq))) {
+    if (Math.sqrt(sq) === Math.floor(Math.sqrt(sq))) {
         return Math.pow((Math.sqrt(sq) + 1), 2)
     } else {
         return -1;
@@ -231,9 +231,9 @@ function findNextSquare(sq) {
 
 
 // -----22-----
-var number = function(busStops){
+var number = function (busStops) {
     let people = 0;
-    for(let i = 0; i < busStops.length; i++) {
+    for (let i = 0; i < busStops.length; i++) {
         people = people + busStops[i][0] - busStops[i][1];
     }
     return people;
@@ -241,9 +241,9 @@ var number = function(busStops){
 
 
 // -----23-----
-var number=function(array){
+var number = function (array) {
     const newArr = [];
-    if(array.length === 0) {
+    if (array.length === 0) {
         return newArr;
     }
     array.forEach((elem, index) => newArr.push(`${index + 1}: ${elem}`))
@@ -252,14 +252,14 @@ var number=function(array){
 
 
 // -----24-----
-function sortByLength (array) {
+function sortByLength(array) {
     return array.sort((a, b) => a.length - b.length)
 };
 
 
 // -----25-----
-function roundToNext5(n){
-    return Math.ceil(n/5) * 5;
+function roundToNext5(n) {
+    return Math.ceil(n / 5) * 5;
 }
 
 
@@ -273,7 +273,7 @@ function reverseLetter(str) {
 
 // -----27-----
 function sumDigits(number) {
-    if(number < 0) {
+    if (number < 0) {
         number = number * (-1);
     }
     const arr = String(number).split("")
@@ -285,8 +285,8 @@ function sumDigits(number) {
 // -----28-----
 function checkExam(array1, array2) {
     let points = 0;
-    for(let i = 0; i < array1.length; i++) {
-        if(array1[i] === array2[i]) {
+    for (let i = 0; i < array1.length; i++) {
+        if (array1[i] === array2[i]) {
             points += 4;
         } else if (array1[i] !== array2[i] && array2[i] !== "") {
             points--;
@@ -302,8 +302,8 @@ function checkExam(array1, array2) {
 // -----29-----
 var capitals = function (word) {
     const arr = [];
-    for(let i = 0; i < word.length; i++) {
-        if(word[i].toUpperCase() === word[i]) {
+    for (let i = 0; i < word.length; i++) {
+        if (word[i].toUpperCase() === word[i]) {
             arr.push(i);
         }
     }
@@ -312,9 +312,9 @@ var capitals = function (word) {
 
 
 // -----30-----
-function smallEnough(a, limit){
-    for(let i = 0; i < a.length; i++) {
-        if(a[i] > limit) {
+function smallEnough(a, limit) {
+    for (let i = 0; i < a.length; i++) {
+        if (a[i] > limit) {
             return false;
         }
     }
@@ -329,7 +329,7 @@ function sum(...args) {
 
 
 // -----32-----
-function findShort(s){
+function findShort(s) {
     const arr = s.split(" ");
     const arrSort = arr.sort((a, b) => a.length - b.length);
     return arrSort[0].length;
@@ -337,12 +337,12 @@ function findShort(s){
 
 
 // -----33-----
-function remove (string) {
+function remove(string) {
     let regExp = /!*$/;
     const arr = string.split(" ");
     const arrNew = [];
-    for(let i = 0; i < arr.length; i++) {
-        arrNew.push(arr[i].replace(regExp,""));
+    for (let i = 0; i < arr.length; i++) {
+        arrNew.push(arr[i].replace(regExp, ""));
     }
     return arrNew.join(" ");
 }
@@ -363,10 +363,10 @@ String.prototype.toJadenCase = function () {
 
 
 // -----36-----
-function getDivisorsCnt(n){
+function getDivisorsCnt(n) {
     let counter = 0;
-    for(let i = 0; i <= n; i++) {
-        if(n % i === 0) {
+    for (let i = 0; i <= n; i++) {
+        if (n % i === 0) {
             counter++;
         }
     }
@@ -375,54 +375,55 @@ function getDivisorsCnt(n){
 
 
 // -----37-----
-function getEvenNumbers(numbersArray){
+function getEvenNumbers(numbersArray) {
     return numbersArray.filter(el => el % 2 === 0)
 }
 
 
 // -----38-----
 "use strict";
+
 function flattenAndSort(array) {
     const newArr = [].concat(...array);
-    return newArr.sort((a,b) => a - b);
+    return newArr.sort((a, b) => a - b);
 }
 
 
 // -----39-----
-function shorter_reverse_longer(a,b){
+function shorter_reverse_longer(a, b) {
     let newString = "";
-    if(a.length >= b.length) {
+    if (a.length >= b.length) {
         const arr = a.split("");
         let newA = arr.reverse().join("");
-        newString = b+newA+b;
+        newString = b + newA + b;
     } else {
         const arr = b.split("");
         let newB = arr.reverse().join("");
-        newString = a+newB+a;
+        newString = a + newB + a;
     }
     return newString;
 }
 
 
 // -----40-----
-function isPowerOfTwo(n){
+function isPowerOfTwo(n) {
     if (n < 1) {
         return false;
     } else if (n === 1) {
         return true;
     } else {
-        if(n / 2 === 2) {
+        if (n / 2 === 2) {
             return true;
         } else {
-            return isPowerOfTwo(n/2);
+            return isPowerOfTwo(n / 2);
         }
     }
 }
 
 
 // -----41-----
-function solution(nums){
-    if(nums === null || nums.length === 0) {
+function solution(nums) {
+    if (nums === null || nums.length === 0) {
         return [];
     } else {
         return nums.sort((a, b) => a - b);
@@ -431,14 +432,14 @@ function solution(nums){
 
 
 // -----42-----
-function isIsogram(str){
+function isIsogram(str) {
     if (str.length === 0) {
         return true;
     }
     const arr = [];
     for (let el of str) {
         let elLowerCase = el.toLowerCase();
-        if(arr.indexOf(elLowerCase) === -1) {
+        if (arr.indexOf(elLowerCase) === -1) {
             arr.push(elLowerCase);
         } else {
             return false;
@@ -449,7 +450,7 @@ function isIsogram(str){
 
 
 // -----43-----
-function DNAStrand(dna){
+function DNAStrand(dna) {
     let newStr = "";
     for (let el of dna) {
         switch (el) {
@@ -474,7 +475,7 @@ function DNAStrand(dna){
 // -----44-----
 function oddOrEven(array) {
     let sum = array.reduce((acc, el) => acc + el, 0)
-    if(sum % 2 === 0) {
+    if (sum % 2 === 0) {
         return "even"
     } else {
         return "odd"
@@ -483,10 +484,10 @@ function oddOrEven(array) {
 
 
 // -----45-----
-function noOdds( values ){
+function noOdds(values) {
     const arr = [];
     for (let value of values) {
-        if(value % 2 === 0) {
+        if (value % 2 === 0) {
             arr.push(value)
         }
     }
@@ -498,7 +499,7 @@ function noOdds( values ){
 function orderFood(list) {
     const results = {};
     list.forEach(el => {
-        if(results[el.meal] === undefined) {
+        if (results[el.meal] === undefined) {
             results[el.meal] = 1;
         } else {
             results[el.meal]++;
@@ -511,8 +512,8 @@ function orderFood(list) {
 // -----47-----
 function findSum(n) {
     let sum = 0;
-    for(let i = 1; i <= n; i++) {
-        if(i % 3 === 0 || i % 5 === 0) {
+    for (let i = 1; i <= n; i++) {
+        if (i % 3 === 0 || i % 5 === 0) {
             sum += i;
         }
     }
@@ -521,11 +522,11 @@ function findSum(n) {
 
 
 // -----48-----
-function rowWeights(array){
+function rowWeights(array) {
     let sum1 = 0;
     let sum2 = 0;
     array.forEach((el, index) => {
-        if(index % 2 == 0) {
+        if (index % 2 == 0) {
             sum1 += el;
         } else {
             sum2 += el;
@@ -549,9 +550,9 @@ function cookingTime(eggs) {
 
 
 // -----50-----
-function bump(x){
+function bump(x) {
     const arr = x.match(/n/gi);
-    if(arr === null || arr.length <= 15) {
+    if (arr === null || arr.length <= 15) {
         return "Woohoo!"
     } else {
         return "Car Dead"
@@ -563,7 +564,7 @@ function bump(x){
 function nbYear(p0, percent, aug, p) {
     let i = 0;
     while (p0 < p) {
-        p0 = p0 + Math.floor(percent * p0 *0.01) + aug;
+        p0 = p0 + Math.floor(percent * p0 * 0.01) + aug;
         i++;
     }
     return i;
@@ -571,18 +572,18 @@ function nbYear(p0, percent, aug, p) {
 
 
 // -----52-----
-function minMax(arr){
+function minMax(arr) {
     const newArr = arr.sort((a, b) => a - b);
-    return [newArr[0],newArr[newArr.length - 1]]; // fix me!
+    return [newArr[0], newArr[newArr.length - 1]]; // fix me!
 }
 
 
 // -----53-----
-function removeDuplicateWords (s) {
+function removeDuplicateWords(s) {
     const arr = s.split(" ");
-    const newArr =[];
-    for(let i = 0; i < arr.length; i++) {
-        if(newArr.indexOf(arr[i]) === -1) {
+    const newArr = [];
+    for (let i = 0; i < arr.length; i++) {
+        if (newArr.indexOf(arr[i]) === -1) {
             newArr.push(arr[i]);
         }
     }
@@ -592,7 +593,7 @@ function removeDuplicateWords (s) {
 
 // -----54-----
 function reverseNumber(n) {
-    if(n >= 0) {
+    if (n >= 0) {
         return Number(String(n).split("").reverse().join(""));
     } else {
         return (-1) * Number(String((-1) * n).split("").reverse().join(""));
@@ -608,7 +609,7 @@ function evenNumbers(array, number) {
 
 
 // -----56-----
-function gimme (triplet) {
+function gimme(triplet) {
     const arr = [...triplet];
     arr.sort((a, b) => a - b);
     return triplet.indexOf(arr[1]);
@@ -616,17 +617,17 @@ function gimme (triplet) {
 
 
 // -----57-----
-function solve(s){
+function solve(s) {
     let upper = 0;
     let lower = 0;
-    for(let i = 0; i < s.length; i++) {
+    for (let i = 0; i < s.length; i++) {
         if (s[i].toLowerCase() === s[i]) {
             lower++
         } else {
             upper++
         }
     }
-    if(upper > lower) {
+    if (upper > lower) {
         return s.toUpperCase()
     } else {
         return s.toLowerCase()
@@ -635,20 +636,20 @@ function solve(s){
 
 
 // -----58-----
-function minValue(values){
+function minValue(values) {
     const arr = [];
     values.forEach(el => {
-        if(arr.indexOf(el) === -1) {
+        if (arr.indexOf(el) === -1) {
             arr.push(el)
         }
     })
-    const arrSort = arr.sort((a,b) => a - b)
+    const arrSort = arr.sort((a, b) => a - b)
     return +arrSort.join("")
 }
 
 
 // -----59-----
-function sortGiftCode(code){
+function sortGiftCode(code) {
     return code.split("").sort().join("")
 }
 
@@ -664,7 +665,7 @@ function digitize(n) {
 function hydrate(s) {
     const arr = s.match(/\d+/g);
     let num = arr.reduce((acc, el) => acc + +el, 0)
-    if(num === 1) {
+    if (num === 1) {
         return num + " glass of water"
     } else {
         return num + " glasses of water"
@@ -678,7 +679,7 @@ function longest(s1, s2) {
     const arr = str.split("").sort();
     const newArr = [];
     arr.forEach(el => {
-        if(newArr.indexOf(el) === -1) {
+        if (newArr.indexOf(el) === -1) {
             newArr.push(el)
         }
     })
@@ -688,9 +689,9 @@ function longest(s1, s2) {
 
 // -----63-----
 function stray(numbers) {
-    if(numbers[0] === numbers[1]) {
+    if (numbers[0] === numbers[1]) {
         return numbers.filter(el => el !== numbers[0])[0]
-    } else if(numbers[0] === numbers[2]) {
+    } else if (numbers[0] === numbers[2]) {
         return numbers[1]
     } else {
         return numbers[0]
@@ -707,14 +708,91 @@ function printerError(s) {
 
 // -----65-----
 const sequenceSum = (begin, end, step) => {
-    if(begin > end) {
+    if (begin > end) {
         return 0
-    } else if(begin === end) {
+    } else if (begin === end) {
         return begin
     }
     let sum = 0;
-    for(let i = begin; i <= end; i += step) {
+    for (let i = begin; i <= end; i += step) {
         sum += i;
     }
     return sum;
+};
+
+
+// -----66-----
+function divisors(integer) {
+    const arr = []
+    for (let i = 2; i < integer; i++) {
+        if (integer % i === 0) {
+            arr.push(i)
+        }
+    }
+    if (arr.length === 0) {
+        return `${integer} is prime`
+    } else {
+        return arr
+    }
+}
+
+
+// -----67-----
+SequenceSum.showSequence = function (count) {
+    let sum = 0;
+    let str = ""
+    if (count < 0) {
+        return count + "<0"
+    } else if (count === 0) {
+        return "0=0"
+    }
+    for (let i = 0; i <= count; i++) {
+        sum += i
+        if (i != count) {
+            str = str + i + "+"
+        } else {
+            str = str + i + " = " + sum
+        }
+    }
+    return str
+};
+
+
+// -----68-----
+
+function adjacentElementsProduct(array) {
+    let max = array[0];
+    let pred = array[0];
+    for (let i = 1; i < array.length; i++) {
+        if (pred * array[i] > max) {
+            max = pred * array[i]
+        }
+        pred = array[i]
+    }
+    return max
+}
+
+
+// -----69-----
+function cubeOdd(arr) {
+    for(let i = 0; i < arr.length; i++) {
+        if(typeof arr[i] !== "number") {
+            return undefined;
+        }
+    }
+    return arr.filter(el => el % 2 !== 0).reduce((acc, el) => acc + el*el*el, 0)
+}
+
+
+// -----70-----
+var isAnagram = function(test, original) {
+    let test2 = test.toLowerCase().split("").sort().join("");
+    console.log(test2)
+    let original2 = original.toLowerCase().split("").sort().join("");
+    console.log(original2)
+    if(test2 === original2) {
+        return true
+    } else {
+        return false
+    }
 };
