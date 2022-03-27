@@ -1173,3 +1173,55 @@ var replaceDots = function(str) {
 function dutyFree(normPrice, discount, hol){
     return Math.floor(hol/(normPrice*discount/100))
 }
+
+
+// -----121-----
+var Ball = function(ballType) {
+    if(ballType) {
+        this.ballType = ballType
+    } else {
+        this.ballType = "regular"
+    }
+};
+
+
+// -----122-----
+function well(x){
+    const newArr = x.filter(el => el === 'good');
+    switch (true) {
+        case newArr.length > 2:
+            return "I smell a series!";
+            break;
+        case newArr.length > 0:
+            return "Publish!"
+            break;
+        default:
+            return "Fail!"
+    }
+}
+
+
+// -----123-----
+function sayHello(name) {
+    return `Hello, ${name}`
+}
+
+
+// -----124-----
+function stringy(size) {
+    let str = ""
+    for(let i = 1; i <= size; i++) {
+        if(i % 2 === 0) {
+            str += "0"
+        } else {
+            str += "1"
+        }
+    }
+    return str;
+}
+
+
+// -----125-----
+function nthEven(n){
+    return n * 2 - 2
+}
