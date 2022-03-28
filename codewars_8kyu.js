@@ -1225,3 +1225,35 @@ function stringy(size) {
 function nthEven(n){
     return n * 2 - 2
 }
+
+
+// -----126-----
+function getSize(width, height, depth) {
+    return[(width * depth + height * depth + width * height ) * 2 , width * height * depth]
+}
+
+
+// -----127-----
+function noBoringZeros(n) {
+    const regExp = /0+$/g;
+    return +String(n).replace(regExp, "")
+}
+
+
+// -----128-----
+function nameShuffler(str){
+    return str.split(" ").reverse().join(" ")
+}
+
+
+// -----129-----
+var websites = []
+for(let i = 1; i <= 1000; i++) {
+    websites.push("codewars")
+}
+
+
+// -----130-----
+function arrayMadness(a, b) {
+    return (a.reduce((acc, el) => acc + el * el, 0)) > (b.reduce((acc, el) => acc + el * el * el, 0))
+}
