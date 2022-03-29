@@ -1257,3 +1257,41 @@ for(let i = 1; i <= 1000; i++) {
 function arrayMadness(a, b) {
     return (a.reduce((acc, el) => acc + el * el, 0)) > (b.reduce((acc, el) => acc + el * el * el, 0))
 }
+
+
+// -----131-----
+function array(arr){
+    const newArr = arr.split(",")
+    if(newArr.length <= 2) {
+        return null
+    }
+    return newArr.splice(1, newArr.length - 2).join(" ")
+}
+
+
+// -----132-----
+function reverse(string){
+    return string.split(" ").reverse(). join(" ")
+}
+
+
+// -----133-----
+function addLength(str) {
+    const arr = str.split(" ");
+    const newArr = arr.map(el => `${el} ${el.length}`)
+    return newArr;
+}
+
+
+// -----134-----
+function sayHello( name, city, state ) {
+    return `Hello, ${name.join(" ")}! Welcome to ${city}, ${state}!`
+}
+
+
+// -----135-----
+function position(letter){
+    const alphabetString = "abcdefghijklmnopqrstuvwxyz"
+    const alphabetArray = alphabetString.split("")
+    return `Position of alphabet: ${(alphabetArray.indexOf(letter) + 1)}`
+}
