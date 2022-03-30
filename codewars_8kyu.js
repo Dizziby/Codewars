@@ -1295,3 +1295,35 @@ function position(letter){
     const alphabetArray = alphabetString.split("")
     return `Position of alphabet: ${(alphabetArray.indexOf(letter) + 1)}`
 }
+
+
+// -----136-----
+function pipeFix(numbers){
+    const newArr = [];
+    for(let i = Math.min(...numbers); i <= Math.max(...numbers); i++) {
+        newArr.push(i)
+    }
+    return newArr;
+}
+
+
+// -----137-----
+function printArray(array){
+    return array.join(",")
+}
+
+
+// -----138-----
+function combat(health, damage) {
+    return health > damage ? health - damage : 0
+}
+
+
+// -----139-----
+function twoDecimalPlaces(n) {
+    return Math.round(n * 100) / 100
+}
+
+
+// -----140-----
+const solve = (x, y) => x / y
