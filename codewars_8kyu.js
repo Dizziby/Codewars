@@ -1327,3 +1327,53 @@ function twoDecimalPlaces(n) {
 
 // -----140-----
 const solve = (x, y) => x / y
+
+
+// -----141-----
+var findAverage = function (nums) {
+    return nums.reduce((acc, el) => acc + el, 0) / nums.length
+}
+
+
+// -----142-----
+function include(arr, item){
+    return arr.includes(item)
+}
+
+
+// -----143-----
+function sakuraFall(v) {
+    if(v <= 0) {
+        return 0
+    } else {
+        return 400 / v
+    }
+}
+
+
+// -----144-----
+function whatday(num) {
+    const obj = {
+        1: "Sunday",
+        2: "Monday",
+        3: "Tuesday",
+        4: "Wednesday",
+        5: "Thursday",
+        6: "Friday",
+        7: "Saturday",
+    }
+
+    if(num < 8 && num > 0) {
+        return obj[num]
+    } else {
+        return "Wrong, please enter a number between 1 and 7"
+    }
+
+
+}
+
+
+// -----145-----
+function odds(values){
+    return values.filter(el => el % 2 !== 0);
+}
