@@ -1377,3 +1377,34 @@ function whatday(num) {
 function odds(values){
     return values.filter(el => el % 2 !== 0);
 }
+
+
+// -----146-----
+var a = "code";
+var b = "wa.rs";
+var name = a + b;
+
+
+// -----147-----
+var laLigaGoals = 43
+var championsLeagueGoals = 10
+var copaDelReyGoals = 5
+var totalGoals = laLigaGoals + championsLeagueGoals + copaDelReyGoals
+
+
+// -----148-----
+function goals (laLigaGoals, copaDelReyGoals, championsLeagueGoals) {
+    return laLigaGoals + copaDelReyGoals + championsLeagueGoals
+}
+
+
+// -----149-----
+function square(n) {
+    return n * n
+}
+
+
+// -----150-----
+function fixTheMeerkat(arr) {
+    return arr.reverse()
+}
