@@ -1408,3 +1408,43 @@ function square(n) {
 function fixTheMeerkat(arr) {
     return arr.reverse()
 }
+
+
+// -----151-----
+function move (position, roll) {
+    return position + roll * 2
+}
+
+
+// -----152-----
+const arr = N => {
+    const newArr = [];
+    for(let i = 0; i < N; i++) {
+        newArr.push(i)
+    }
+    return newArr;
+};
+
+
+// -----153-----
+function isPalindrome(line) {
+    return String(line) === String(line).split("").reverse().join("");
+}
+
+
+// -----154-----
+function distinct(a) {
+    const resArr = [];
+    a.forEach(el => {
+        if(resArr.indexOf(el) < 0) {
+            resArr.push(el)
+        }
+    });
+    return resArr;
+}
+
+
+// -----155-----
+function main (verb, noun) {
+    return verb + noun
+}
