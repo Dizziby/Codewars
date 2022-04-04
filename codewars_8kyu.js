@@ -1602,3 +1602,72 @@ function lowercaseCount(str){
     }
     return count;
 }
+
+
+// -----161-----
+function grader(score) {
+    switch (true) {
+        case score > 1:
+            return "F";
+            break;
+        case score >= 0.9:
+            return "A";
+            break;
+        case score >= 0.8:
+            return "B";
+            break;
+        case score >= 0.7:
+            return "C";
+            break;
+        case score >= 0.6:
+            return "D";
+            break;
+        default:
+            return "F";
+    }
+}
+
+
+// -----162-----
+function validateCode (code) {
+    return  /^[123]/.test(code)
+}
+
+
+// -----163-----
+function mystery() {
+    var results =
+        {sanity: 'Hello'};
+    return results;
+}
+
+
+// -----164-----
+function evalObject(value){
+    var result = 0;
+    switch(value.operation){
+        case'+': result = value.a + value.b;
+            break;
+        case'-': result = value.a - value.b;
+            break;
+        case'/': result = value.a / value.b;
+            break;
+        case'*': result = value.a * value.b;
+            break;
+        case'%': result = value.a % value.b;
+            break;
+        case'^': result = Math.pow(value.a, value.b);
+            break;
+    }
+    return result;
+}
+
+
+// -----165-----
+function rainAmount(mm){
+    if (mm < 40) {
+        return `You need to give your plant ${40 - mm}mm of water`
+    } else if (mm >= 40) {
+        return "Your plant has had more than enough water for today!"
+    };
+}
