@@ -1671,3 +1671,36 @@ function rainAmount(mm){
         return "Your plant has had more than enough water for today!"
     };
 }
+
+
+// -----166-----
+function removeEveryOther(arr){
+    return arr.filter((el, index) => index % 2 === 0);
+}
+
+
+// -----167-----
+function derive(coefficient,exponent) {
+    return `${coefficient * exponent}x^${exponent - 1}`
+}
+
+
+// -----168-----
+function animal(obj){
+    return `This ${obj.color} ${obj.name} has ${obj.legs} legs.`
+}
+
+
+// -----169-----
+function getStatus(isBusy) {
+    var msg = (isBusy ? "busy" : "available");
+    return {
+        status: msg
+    }
+}
+
+
+// -----170-----
+function joinStrings(string1, string2){
+    return `${string1} ${string2}`
+}
