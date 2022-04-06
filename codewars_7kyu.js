@@ -796,3 +796,60 @@ var isAnagram = function(test, original) {
         return false
     }
 };
+
+
+// -----71-----
+function insertDash(num) {
+    const arr = String(num).split("");
+    const newArr = [];
+    for(let i = 0; i < arr.length; i++) {
+        if(arr[i] % 2 !== 0 && arr[i+1] % 2 !== 0) {
+            newArr.push(arr[i]);
+            if(i < arr.length - 1) {
+                newArr.push("-");
+            }
+        } else {
+            newArr.push(arr[i]);
+        }
+    }
+    return newArr.join("")
+}
+
+
+// -----72-----
+function removeUrlAnchor(url){
+    let i = url.indexOf("#") || url.length;
+    if(i === -1) {
+        return url
+    } else {
+        return url.slice(0, i)
+    }
+}
+
+
+// -----73-----
+function factorial(n){
+    if(n === 0) {
+        return 1
+    } else if(n === 1) {
+        return n
+    } else {
+        return factorial(n - 1) * n
+    }
+}
+
+
+// -----74-----
+function isLeapYear(year) {
+    if((year % 4 === 0  && year % 100 !== 0)  || (year % 400 === 0 && year % 100 !== 0) || (year % 400 === 0 && year % 4 === 0)) {
+        return true
+    }
+    return false
+}
+
+
+// -----75-----
+var FilterString = function(value) {
+    const arr = value.match(/\d/g)
+    return +arr.join("")
+}
