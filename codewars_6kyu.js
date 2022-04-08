@@ -184,3 +184,46 @@ function sortArray(array) {
     })
     return resultArr
 }
+
+
+// -----13-----
+function alphabetPosition(text) {
+    const alphabet = 'abcdefghijklmnopqrstuvwxyz'
+    const alphabetArray = alphabet.split("")
+    let result = []
+    for(let i = 0; i < text.length; i++) {
+        if(alphabetArray.indexOf(text[i].toLowerCase()) >= 0) {
+            result.push(alphabetArray.indexOf(text[i].toLowerCase()) + 1)
+        }
+    }
+    return result.join(" ");
+}
+
+
+// -----14-----
+function isPangram(string){
+    const alphabet = 'abcdefghijklmnopqrstuvwxyz'
+    const alphabetArray = alphabet.split("")
+    let stringArray = string.toLowerCase().match(/[a-z]/gi)
+    for(let i = 0; i < alphabetArray.length; i++) {
+        if(stringArray.indexOf(alphabetArray[i]) === -1) {
+            return false
+        }
+    }
+    return true;
+}
+
+
+// -----15-----
+function count (string) {
+    const arr = string.split("")
+    const obj = {}
+    arr.forEach(el => {
+        if(!obj.hasOwnProperty(el)) {
+            obj[el] = 1
+        } else {
+            obj[el]++
+        }
+    })
+    return obj;
+}
