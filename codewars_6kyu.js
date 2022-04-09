@@ -227,3 +227,49 @@ function count (string) {
     })
     return obj;
 }
+
+
+// -----16-----
+function parse( data ) {
+    const arr = []
+    let initial = 0;
+    for(let i = 0; i < data.length; i++) {
+        switch (data[i]) {
+            case "i": initial++;
+                break;
+            case "d": initial--;
+                break;
+            case "s": initial = Math.pow(initial, 2);
+                break;
+            case "o": arr.push(initial)
+        }
+    }
+    return arr
+}
+
+
+// -----17-----
+function highestRank(arr){
+    const obj = {}
+    arr.forEach(el => {
+        if(obj.hasOwnProperty(el)) {
+            obj[el]++
+        } else {
+            obj[el] = 1
+        }
+    })
+    let result = 0;
+    let keyRes;
+    for(let key in obj) {
+        if(obj[key] > result) {
+            result = obj[key];
+            keyRes = key
+        } else if (obj[key] === result) {
+            if(key > keyRes) {
+                result = obj[key];
+                keyRes = key
+            }
+        }
+    }
+    return +keyRes
+}
