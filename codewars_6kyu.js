@@ -273,3 +273,53 @@ function highestRank(arr){
     }
     return +keyRes
 }
+
+
+// -----18-----
+function balance(left,right){
+    let weightRigth = 0;
+    let weightLeft = 0;
+    for(let i = 0; i < left.length; i++) {
+        if(left[i] === "!") {
+            weightLeft += 2
+        } else {
+            weightLeft += 3
+        }
+    }
+    for(let i = 0; i < right.length; i++) {
+        if(right[i] === "!") {
+            weightRigth += 2
+        } else {
+            weightRigth += 3
+        }
+    }
+    if(weightRigth > weightLeft) {
+        return "Right"
+    } else if (weightRigth < weightLeft) {
+        return "Left"
+    } else {
+        return "Balance"
+    }
+}
+
+
+// -----19-----
+function numberOfPairs(gloves) {
+    const obj = {}
+    for(let i = 0; i < gloves.length; i++) {
+        if(obj.hasOwnProperty(gloves[i])) {
+            obj[gloves[i]]++
+        } else {
+            obj[gloves[i]] = 1
+        }
+    }
+    let result = 0;
+    for(let key in obj) {
+        if(obj[key] % 2 === 0) {
+            result += obj[key] / 2
+        } else {
+            result += (obj[key] - 1) / 2
+        }
+    }
+    return result
+}
