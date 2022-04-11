@@ -1704,3 +1704,15 @@ function getStatus(isBusy) {
 function joinStrings(string1, string2){
     return `${string1} ${string2}`
 }
+
+
+// -----171-----
+function typeValidation(variable, type) {
+    return typeof variable === type
+}
+
+
+// -----172-----
+function sumSquares(array) {
+    return array.reduce((acc, el) => acc + el * el, 0)
+}
