@@ -1716,3 +1716,38 @@ function typeValidation(variable, type) {
 function sumSquares(array) {
     return array.reduce((acc, el) => acc + el * el, 0)
 }
+
+
+// -----173-----
+Math.roundTo = function (number, precision) {
+    let num = 1;
+    for(let i = 0; i < precision; i++) {
+        num *= 10
+    }
+    return Math.round(number * num)/num
+}
+
+
+// -----174-----
+function Counter() {
+    this.value = 0;
+}
+
+Counter.prototype.increase = function() {
+    return this.value++;
+};
+
+Counter.prototype.getValue = function() {
+    return this.value;
+};
+
+Counter.prototype.reset = function() {
+    return this.value = 0;
+};
+
+
+// -----175-----
+function getNumberFromString(s) {
+    const arr = s.match(/\d/gi)
+    return +arr.join("");
+}
