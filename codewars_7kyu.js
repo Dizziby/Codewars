@@ -853,3 +853,35 @@ var FilterString = function(value) {
     const arr = value.match(/\d/g)
     return +arr.join("")
 }
+
+
+// -----76-----
+function unusedDigits(){
+    let args = [];
+    for (let i = 0; i < arguments.length; i++) {
+        args[i] = arguments[i];
+    }
+    let integers = "0123456789";
+    let stringNumbers = args.join("")
+    let result = "";
+    for(let i = 0; i < integers.length; i++) {
+        let regExp = new RegExp(integers[i], "g")
+        if(!regExp.test(stringNumbers)) {
+            result += integers[i]
+        }
+    }
+    return result
+}
+
+
+// -----77-----
+function getMissingElement(superImportantArray){
+    let integers = "0123456789";
+    let stringNumbers = superImportantArray.join("")
+    for(let i = 0; i < integers.length; i++) {
+        let regExp = new RegExp(integers[i], "g")
+        if(!regExp.test(stringNumbers)) {
+            return +integers[i]
+        }
+    }
+}
