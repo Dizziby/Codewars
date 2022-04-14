@@ -885,3 +885,28 @@ function getMissingElement(superImportantArray){
         }
     }
 }
+
+
+// -----78-----
+var splitInParts = function(s, partLength){
+    let array = s.split("");
+    const newArray = [];
+    for(let i = 0; i < array.length; i++) {
+        if((i+1) % partLength === 0) {
+            newArray.push(array[i])
+            if((i+1) !== array.length) {
+                newArray.push(" ")
+            }
+        } else {
+            newArray.push(array[i])
+        }
+    }
+    return newArray.join("")
+}
+
+
+// -----79-----
+const closestMultiple10 = num => {
+    let result = Math.round(num/10)*10
+    return result;
+};
