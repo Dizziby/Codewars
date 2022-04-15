@@ -1751,3 +1751,15 @@ function getNumberFromString(s) {
     const arr = s.match(/\d/gi)
     return +arr.join("");
 }
+
+
+// -----176-----
+function checkTheBucket(bucket){
+    return bucket.includes("gold")
+}
+
+
+// -----177-----
+function add(a, b){
+    return a==b
+}
