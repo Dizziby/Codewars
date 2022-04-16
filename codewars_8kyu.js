@@ -1763,3 +1763,30 @@ function checkTheBucket(bucket){
 function add(a, b){
     return a==b
 }
+
+
+// -----178-----
+function ensureQuestion(s) {
+    if(/\?$/.test(s)) {
+        return s
+    } else {
+        return s + "?"
+    }
+}
+
+
+// -----179-----
+function sixToast(num) {
+    if(num < 6) {
+        return 6 - num
+    } else if (num > 6) {
+        return num - 6
+    }
+    return 0
+}
+
+
+// -----180-----
+function stringClean(s){
+    return s.replace(/\d/g, "")
+}
