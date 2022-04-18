@@ -1813,3 +1813,44 @@ function uefaEuro2016(teams, scores){
         return `At match ${teams[0]} - ${teams[1]}, teams played draw.`
     }
 }
+
+
+// -----183-----
+function first(arr, n = 1) {
+    const result = [];
+    if(n === 0) {
+        return result
+    } else {
+        if(n < arr.length) {
+            for(let i = 0; i < n; i++) {
+                result.push(arr[i])
+            }
+        } else {
+            for(let i = 0; i < arr.length; i++) {
+                result.push(arr[i])
+            }
+        }
+
+    }
+    return result
+}
+
+
+// -----184-----
+function charFreq(message) {
+    const result = {};
+    for(let i = 0; i < message.length; i++) {
+        if(result[message[i]]) {
+            result[message[i]]++
+        } else {
+            result[message[i]] = 1
+        }
+    }
+    return result
+}
+
+
+// -----185-----
+function none(arr, fun){
+    return !arr.filter(fun).length
+}
