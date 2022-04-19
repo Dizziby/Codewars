@@ -1854,3 +1854,22 @@ function charFreq(message) {
 function none(arr, fun){
     return !arr.filter(fun).length
 }
+
+
+// -----186-----
+function validateHello(greetings) {
+    res =  /hello|ciao|salut|hallo|hola|ahoj|czesc/gi.test(greetings)
+    return res
+}
+
+
+// -----187-----
+Array.prototype.filter = function (func) {
+    const arr = [];
+    for(let i = 0; i < this.length; i++) {
+        if(func(this[i])) {
+            arr.push(this[i])
+        }
+    }
+    return arr;
+}
