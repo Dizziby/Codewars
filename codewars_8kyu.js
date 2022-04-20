@@ -1,11 +1,11 @@
 // -----1-----
-function multiply(a, b){
+function multiply(a, b) {
     return a * b
 }
 
 // -----2-----
 function isDivisible(n, x, y) {
-    if(n % x === 0 && n % y === 0) {
+    if (n % x === 0 && n % y === 0) {
         return true
     } else {
         return false
@@ -18,17 +18,17 @@ function numberToString(num) {
 }
 
 // -----4-----
-const areaOrPerimeter = function(l , w) {
-    return l ===w ? l * w : (l + w) * 2
+const areaOrPerimeter = function (l, w) {
+    return l === w ? l * w : (l + w) * 2
 };
 
 // -----5-----
-function sumStr(a,b) {
+function sumStr(a, b) {
     return String(+a + +b);
 }
 
 // -----6-----
-function removeChar(str){
+function removeChar(str) {
     return str.slice(1, str.length - 1)
 };
 
@@ -48,14 +48,14 @@ function points(games) {
 }
 
 // -----8-----
-function abbrevName(name){
+function abbrevName(name) {
     const arr = name.split(" ");
     return `${arr[0][0]}.${arr[1][0]}`.toUpperCase();
     // code away
 }
 
 // -----9-----
-function sumMul(n,m){
+function sumMul(n, m) {
     let sum = 0;
     if (m <= 0 || n <= 0) {
         return "INVALID"
@@ -70,7 +70,7 @@ function sumMul(n,m){
 }
 
 // -----10-----
-function reverseWords(str){
+function reverseWords(str) {
     const arr = str.split(" ");
     const newArr = [];
     for (let i = 0; i < arr.length; i++) {
@@ -80,7 +80,7 @@ function reverseWords(str){
 }
 
 // -----11-----
-function remove (string) {
+function remove(string) {
     const arr = string.slice(" ");
     const newArr = [];
     if (arr[arr.length - 1] === "!") {
@@ -96,9 +96,9 @@ function remove (string) {
 }
 
 // -----12-----
-function remove (string) {
+function remove(string) {
     let regExp = /!/g;
-    let newStr = string.replace(regExp,"");
+    let newStr = string.replace(regExp, "");
     newStr += "!";
     return newStr;
 }
@@ -111,23 +111,23 @@ function findNeedle(haystack) {
 }
 
 // -----14-----
-function solution(str){
+function solution(str) {
     return str.split("").reverse().join("");
 }
 
 // -----15-----
-function powersOfTwo(n){
+function powersOfTwo(n) {
     const arr = [];
-    for(let i = 0; i <= n; i++) {
+    for (let i = 0; i <= n; i++) {
         arr.push(Math.pow(2, i));
     }
     return arr;
 }
 
 // -----16-----
-function remainder(n, m){
+function remainder(n, m) {
     let x, y;
-    if( n > m) {
+    if (n > m) {
         x = n;
         y = m;
     } else {
@@ -162,7 +162,7 @@ const reverseSeq = n => {
 
 
 // -----18-----
-function repeatStr (n, s) {
+function repeatStr(n, s) {
     return s.repeat(n);
 }
 
@@ -170,7 +170,7 @@ function repeatStr (n, s) {
 // -----19-----
 function hello(name) {
     console.log(name);
-    if(name !== "" && name !== undefined) {
+    if (name !== "" && name !== undefined) {
         let str = name[0].toUpperCase() + name.slice(1).toLowerCase();
         return `Hello, ${str}\!`;
     } else {
@@ -181,7 +181,7 @@ function hello(name) {
 
 // -----20-----
 function even_or_odd(number) {
-    if(number % 2 === 0) {
+    if (number % 2 === 0) {
         return "Even"
     } else {
         return "Odd"
@@ -197,7 +197,7 @@ function positiveSum(arr) {
 
 // -----22-----
 function makeNegative(num) {
-    if(num <= 0) {
+    if (num <= 0) {
         return num;
     } else {
         return num * (-1);
@@ -212,7 +212,7 @@ function opposite(number) {
 
 
 // -----24-----
-function boolToWord( bool ){
+function boolToWord(bool) {
     return bool ? "Yes" : "No"
 }
 
@@ -220,7 +220,7 @@ function boolToWord( bool ){
 // -----25-----
 var summation = function (num) {
     let result = 0;
-    for(let i = 1; i <= num; i++) {
+    for (let i = 1; i <= num; i++) {
         result += i;
     }
     return result;
@@ -237,13 +237,13 @@ class SmallestIntegerFinder {
 
 // -----27-----
 function countPositivesSumNegatives(input) {
-    if(input === null || input.length === 0) {
+    if (input === null || input.length === 0) {
         return [];
     }
     let isPositiv = 0;
     let sumNegative = 0;
     input.forEach(elem => {
-        if(elem > 0) {
+        if (elem > 0) {
             isPositiv++;
         } else {
             sumNegative += elem;
@@ -254,13 +254,13 @@ function countPositivesSumNegatives(input) {
 
 
 // -----28-----
-function noSpace(x){
+function noSpace(x) {
     return x.split(" ").join("");
 }
 
 
 // -----29-----
-function squareSum(numbers){
+function squareSum(numbers) {
     return numbers.reduce((acc, elem) => Math.pow(elem, 2) + acc, 0)
 }
 
@@ -268,8 +268,8 @@ function squareSum(numbers){
 // -----30-----
 function countSheeps(arrayOfSheep) {
     let counter = 0;
-    for(let i = 0; i < arrayOfSheep.length; i++) {
-        if(arrayOfSheep[i] === true) {
+    for (let i = 0; i < arrayOfSheep.length; i++) {
+        if (arrayOfSheep[i] === true) {
             counter++;
         }
     }
@@ -279,14 +279,14 @@ function countSheeps(arrayOfSheep) {
 
 // -----31-----
 function take(arr, n) {
-    if(arr.length === 0) {
+    if (arr.length === 0) {
         return arr;
     }
-    if(n > arr.length) {
+    if (n > arr.length) {
         n = arr.length;
     }
     const newArr = [];
-    for(let i = 0; i < n; i++) {
+    for (let i = 0; i < n; i++) {
         newArr.push(arr[i]);
     }
     return newArr;
@@ -314,20 +314,21 @@ function litres(time) {
 // -----35-----
 function century(year) {
     // Finish this :)
-    return Math.ceil(year/100);
+    return Math.ceil(year / 100);
 }
 
 
 // -----36-----
-var stringToNumber = function(str){
+var stringToNumber = function (str) {
     return Number(str);
 }
 
 
 // -----37-----
-function basicOp(operation, value1, value2)
-{
-    return eval(`${value1} ${operation} ${value2}`);
+function basicOp(operation, value1, value2) {
+    return eval(`${value1}
+    ${operation}
+    ${value2}`);
 }
 
 
@@ -341,13 +342,13 @@ function digitize(n) {
 
 
 // -----39-----
-function greet(name){
+function greet(name) {
     return `Hello, ${name} how are you doing today?`;
 }
 
 
 // -----40-----
-function maps(x){
+function maps(x) {
     return x.map(elem => elem * 2);
 }
 
@@ -356,22 +357,22 @@ function maps(x){
 function findDifference(a, b) {
     let sum1 = a.reduce((acc, elem) => acc * elem, 1);
     let sum2 = b.reduce((acc, elem) => acc * elem, 1);
-    if(sum1 > sum2) {
-        return (sum1-sum2)
+    if (sum1 > sum2) {
+        return (sum1 - sum2)
     } else {
-        return (sum1-sum2) * (-1);
+        return (sum1 - sum2) * (-1);
     }
 }
 
 
 // -----42-----
-var min = function(list){
-    list.sort((a,b) => a - b)
+var min = function (list) {
+    list.sort((a, b) => a - b)
     return list[0];
 }
 
-var max = function(list){
-    list.sort((a,b) => a - b)
+var max = function (list) {
+    list.sort((a, b) => a - b)
     return list[list.length - 1];
 }
 
@@ -379,7 +380,7 @@ var max = function(list){
 // -----43-----
 function between(a, b) {
     const arr = [];
-    for(let i = a; i <= b; i++) {
+    for (let i = a; i <= b; i++) {
         arr.push(i);
     }
     return arr;
@@ -401,34 +402,34 @@ function invert(array) {
 
 
 // -----46-----
-function past(h, m, s){
+function past(h, m, s) {
     return (h * 3600 + m * 60 + s) * 1000
 }
 
 
 // -----47-----
 function find_average(array) {
-    if(array.length === 0) {
+    if (array.length === 0) {
         return 0
     }
     const sum = array.reduce((acc, elem) => acc + elem, 0);
-    return sum/array.length;
+    return sum / array.length;
 }
 
 
 // -----48-----
-function getAverage(marks){
-    if(marks.length === 0) {
+function getAverage(marks) {
+    if (marks.length === 0) {
         return 0
     }
     const sum = marks.reduce((acc, elem) => acc + elem, 0);
-    return Math.floor(sum/marks.length);
+    return Math.floor(sum / marks.length);
 }
 
 
 // -----49-----
 function check(a, x) {
-    if(a.indexOf(x) === -1) {
+    if (a.indexOf(x) === -1) {
         return false;
     } else {
         return true
@@ -438,7 +439,7 @@ function check(a, x) {
 
 // -----50-----
 function paperwork(n, m) {
-    if(n < 0 || m < 0) {
+    if (n < 0 || m < 0) {
         return 0;
     } else {
         return n * m;
@@ -447,7 +448,7 @@ function paperwork(n, m) {
 
 
 // -----51-----
-function smash (words) {
+function smash(words) {
     return words.join(" ")
 };
 
@@ -459,14 +460,14 @@ function doubleInteger(i) {
 
 
 // -----53-----
-function booleanToString(b){
+function booleanToString(b) {
     return String(b);
 }
 
 
 // -----54-----
-function greet(name){
-    if(name === "Johnny") {
+function greet(name) {
+    if (name === "Johnny") {
         return "Hello, my love!";
     } else {
         return "Hello, " + name + "!";
@@ -481,10 +482,10 @@ function makeUpperCase(str) {
 
 
 // -----56-----
-function fakeBin(x){
+function fakeBin(x) {
     let newString = "";
     for (let el of x) {
-        if(el < 5) {
+        if (el < 5) {
             newString += "0";
         } else {
             newString += "1";
@@ -495,8 +496,8 @@ function fakeBin(x){
 
 
 // -----57-----
-function hero(bullets, dragons){
-    if(bullets >= 2 * dragons) {
+function hero(bullets, dragons) {
+    if (bullets >= 2 * dragons) {
         return true
     } else {
         return false
@@ -527,8 +528,8 @@ function bmi(weight, height) {
 // -----59-----
 function DNAtoRNA(dna) {
     let rna = "";
-    for(el of dna) {
-        if(el === "T") {
+    for (el of dna) {
+        if (el === "T") {
             rna += "U"
         } else {
             rna += el
@@ -539,9 +540,9 @@ function DNAtoRNA(dna) {
 
 
 // -----60-----
-function sum (numbers) {
+function sum(numbers) {
     "use strict";
-    if(numbers.length === 0) {
+    if (numbers.length === 0) {
         return 0;
     } else {
         return numbers.reduce((acc, el) => acc + el, 0);
@@ -550,11 +551,11 @@ function sum (numbers) {
 
 
 // -----61-----
-function gooseFilter (birds) {
+function gooseFilter(birds) {
     var geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"];
-    for(let i = 0; i < geese.length; i++) {
+    for (let i = 0; i < geese.length; i++) {
         birds = birds.filter(el => {
-            if(el === geese[i]) {
+            if (el === geese[i]) {
                 return false
             } else {
                 return true
@@ -566,14 +567,14 @@ function gooseFilter (birds) {
 
 
 // -----62-----
-function squareArea(A){
-    return (Math.floor(Math.pow((A*2/Math.PI), 2)*100))/100;
+function squareArea(A) {
+    return (Math.floor(Math.pow((A * 2 / Math.PI), 2) * 100)) / 100;
 }
 
 
 // -----63-----
-function oddCount(n){
-    return Math.floor(n/2);
+function oddCount(n) {
+    return Math.floor(n / 2);
 }
 
 
@@ -587,7 +588,7 @@ function arrayPlusArray(arr1, arr2) {
 // -----65-----
 function monkeyCount(n) {
     const arr = [];
-    for(let i = 1; i <= n; i++) {
+    for (let i = 1; i <= n; i++) {
         arr.push(i);
     }
     return arr;
@@ -595,8 +596,8 @@ function monkeyCount(n) {
 
 
 // -----66-----
-function lovefunc(flower1, flower2){
-    if(flower1 % 2 === 0 && flower2 % 2 !== 0 || flower1 % 2 !== 0 && flower2 % 2 === 0) {
+function lovefunc(flower1, flower2) {
+    if (flower1 % 2 === 0 && flower2 % 2 !== 0 || flower1 % 2 !== 0 && flower2 % 2 === 0) {
         return true
     } else {
         return false
@@ -605,14 +606,14 @@ function lovefunc(flower1, flower2){
 
 
 // -----67-----
-function grow(x){
+function grow(x) {
     return x.reduce((acc, el) => acc * el, 1)
 }
 
 
 // -----68-----
 function simpleMultiplication(number) {
-    if(number % 2 === 0) {
+    if (number % 2 === 0) {
         return number * 8
     } else {
         return number * 9
@@ -622,7 +623,7 @@ function simpleMultiplication(number) {
 
 // -----69-----
 function rentalCarCost(d) {
-    if(d >= 7) {
+    if (d >= 7) {
         return d * 40 - 50
     } else if (d >= 3 && d < 7) {
         return d * 40 - 20
@@ -635,7 +636,7 @@ function rentalCarCost(d) {
 // -----70-----
 function betterThanAverage(classPoints, yourPoints) {
     let middle = classPoints.reduce((acc, el) => acc + el, yourPoints);
-    if(yourPoints >= (middle / (classPoints.length + 1))) {
+    if (yourPoints >= (middle / (classPoints.length + 1))) {
         return true;
     } else {
         return false;
@@ -655,7 +656,7 @@ function pillars(num_pill, dist, width) {
 
 // -----72-----
 function bonusTime(salary, bonus) {
-    if(bonus) {
+    if (bonus) {
         return `\u00A3${salary * 10}`
     } else {
         return `\u00A3${salary}`
@@ -665,7 +666,7 @@ function bonusTime(salary, bonus) {
 
 // -----73-----
 function isDivideBy(number, a, b) {
-    if(number % a === 0 && number % b === 0) {
+    if (number % a === 0 && number % b === 0) {
         return true
     } else {
         return false
@@ -674,15 +675,15 @@ function isDivideBy(number, a, b) {
 
 
 // -----74-----
-function sumMix(x){
+function sumMix(x) {
     return x.reduce((acc, el) => acc + +el, 0)
 }
 
 
 // -----75-----
-var countSheep = function (num){
+var countSheep = function (num) {
     let str = "";
-    for(let i = 1; i <= num; i++) {
+    for (let i = 1; i <= num; i++) {
         str += `${i} sheep...`
     }
     return str
@@ -692,7 +693,7 @@ var countSheep = function (num){
 // -----76-----
 function doubleChar(str) {
     const arr = str.split("");
-    const newArr =  arr.map(el => el.repeat(2));
+    const newArr = arr.map(el => el.repeat(2));
     return newArr.join("");
 }
 
@@ -709,7 +710,7 @@ function enough(cap, on, wait) {
 
 // -----78-----
 function feast(beast, dish) {
-    if(beast[0] === dish[0] && beast[beast.length - 1] === dish[dish.length - 1]) {
+    if (beast[0] === dish[0] && beast[beast.length - 1] === dish[dish.length - 1]) {
         return true
     } else {
         return false
@@ -718,27 +719,27 @@ function feast(beast, dish) {
 
 
 // -----79-----
-function divisibleBy(numbers, divisor){
+function divisibleBy(numbers, divisor) {
     return numbers.filter(el => el % divisor === 0)
 }
 
 
 // -----80-----
-function getGrade (s1, s2, s3) {
+function getGrade(s1, s2, s3) {
     let sum = (s1 + s2 + s3) / 3
-    if(sum >= 90 && sum <= 100) {
+    if (sum >= 90 && sum <= 100) {
         return "A"
     }
-    if(sum >= 80 && sum < 90) {
+    if (sum >= 80 && sum < 90) {
         return "B"
     }
-    if(sum >= 70 && sum < 80) {
+    if (sum >= 70 && sum < 80) {
         return "C"
     }
-    if(sum >= 60 && sum < 70) {
+    if (sum >= 60 && sum < 70) {
         return "D"
     }
-    if(sum >= 0 && sum < 60) {
+    if (sum >= 0 && sum < 60) {
         return "F"
     }
 }
@@ -747,8 +748,8 @@ function getGrade (s1, s2, s3) {
 // -----81-----
 function countBy(x, n) {
     let z = [];
-    for(let i = 1; z.length < n; i++) {
-        if(i % x === 0) {
+    for (let i = 1; z.length < n; i++) {
+        if (i % x === 0) {
             z.push(i);
         }
     }
@@ -757,8 +758,8 @@ function countBy(x, n) {
 
 
 // -----82-----
-function index(array, n){
-    if(n > array.length - 1) {
+function index(array, n) {
+    if (n > array.length - 1) {
         return -1
     } else {
         return Math.pow(array[n], n)
@@ -767,19 +768,19 @@ function index(array, n){
 
 
 // -----83-----
-function checkAlive (health) {
+function checkAlive(health) {
     if (health <= 0) {
         return false
-    } else  {
+    } else {
         return true
     }
 }
 
 
 // -----84-----
-function generateRange(min, max, step){
+function generateRange(min, max, step) {
     const arr = [];
-    for(let i = min; i <= max; i += step) {
+    for (let i = min; i <= max; i += step) {
         arr.push(i);
     }
     return arr;
@@ -793,7 +794,7 @@ function capitalizeWord(word) {
 
 
 // -----86-----
-function stringToArray(string){
+function stringToArray(string) {
     return string.split(" ");
 }
 
@@ -807,7 +808,7 @@ function removeExclamationMarks(s) {
 // -----88-----
 function areYouPlayingBanjo(name) {
     const regExp = /^r/gi;
-    if(regExp.test(name)) {
+    if (regExp.test(name)) {
         return `${name} plays banjo`;
     } else {
         return `${name} does not play banjo`;
@@ -816,9 +817,9 @@ function areYouPlayingBanjo(name) {
 
 
 // -----89-----
-function getPlanetName(id){
+function getPlanetName(id) {
     var name;
-    switch(id){
+    switch (id) {
         case 1:
             name = 'Mercury'
             break
@@ -849,8 +850,8 @@ function getPlanetName(id){
 
 
 // -----90-----
-function problem(x){
-    if(typeof x === "string") {
+function problem(x) {
+    if (typeof x === "string") {
         return "Error"
     } else {
         return x * 50 + 6
@@ -868,7 +869,7 @@ class Kata {
 
 // -----92-----
 function testEven(n) {
-    if(n % 2 === 0) {
+    if (n % 2 === 0) {
         return true
     } else {
         return false
@@ -878,7 +879,7 @@ function testEven(n) {
 
 // -----93-----
 function defineSuit(card) {
-    switch(card[card.length - 1]) {
+    switch (card[card.length - 1]) {
         case "♣":
             return 'clubs';
             break;
@@ -902,14 +903,14 @@ function remove(string) {
 
 
 // -----95-----
-function shortcut (string) {
+function shortcut(string) {
     return string.replace(/[aeiou]/gi, "");
 }
 
 
 // -----96-----
-function solution(a, b){
-    if(a.length > b.length) {
+function solution(a, b) {
+    if (a.length > b.length) {
         return b + a + b
     } else {
         return a + b + a
@@ -918,8 +919,8 @@ function solution(a, b){
 
 
 // -----97-----
-function greet (name, owner) {
-    if(name === owner) {
+function greet(name, owner) {
+    if (name === owner) {
         return "Hello boss"
     } else {
         return "Hello guest"
@@ -934,10 +935,10 @@ function cockroachSpeed(s) {
 
 
 // -----99-----
-function setAlarm(employed, vacation){
-    if(vacation === true) {
+function setAlarm(employed, vacation) {
+    if (vacation === true) {
         return false
-    } else if(vacation === false && employed === false) {
+    } else if (vacation === false && employed === false) {
         return false
     }
     return true
@@ -953,8 +954,8 @@ function otherAngle(a, b) {
 // -----101-----
 String.prototype.toAlternatingCase = function () {
     let newStr = ""
-    for(let i = 0; i < this.length; i++) {
-        if(this[i].toUpperCase() ===  this[i]) {
+    for (let i = 0; i < this.length; i++) {
+        if (this[i].toUpperCase() === this[i]) {
             newStr += this[i].toLowerCase()
         } else {
             newStr += this[i].toUpperCase()
@@ -966,11 +967,11 @@ String.prototype.toAlternatingCase = function () {
 
 // -----102-----
 const quarterOf = (month) => {
-    if(month <= 3) {
+    if (month <= 3) {
         return 1
-    } else if(month <= 6) {
+    } else if (month <= 6) {
         return 2
-    } else if(month <= 9) {
+    } else if (month <= 9) {
         return 3
     }
     return 4
@@ -978,8 +979,8 @@ const quarterOf = (month) => {
 
 
 // -----103-----
-function hoopCount (n) {
-    if(n >= 10) {
+function hoopCount(n) {
+    if (n >= 10) {
         return "Great, now move on to tricks"
     }
     return "Keep at it until you get it"
@@ -1007,8 +1008,8 @@ function greet(language) {
         swedish: 'Valkommen',
         welsh: 'Croeso'
     }
-    for(let key in obj) {
-        if(language === key) {
+    for (let key in obj) {
+        if (language === key) {
             return obj[key]
         }
     }
@@ -1017,35 +1018,45 @@ function greet(language) {
 
 
 // -----105-----
-function strCount(str, letter){
-    let regExp = new RegExp (letter, "g")
+function strCount(str, letter) {
+    let regExp = new RegExp(letter, "g")
     const arr = str.match(regExp) || []
     return arr.length
 }
 
 
 // -----106-----
-function switchItUp(number){
-    switch(number) {
-        case 1: return "One"
+function switchItUp(number) {
+    switch (number) {
+        case 1:
+            return "One"
             break
-        case 2: return "Two"
+        case 2:
+            return "Two"
             break
-        case 3: return "Three"
+        case 3:
+            return "Three"
             break
-        case 4: return "Four"
+        case 4:
+            return "Four"
             break
-        case 5: return "Five"
+        case 5:
+            return "Five"
             break
-        case 6: return "Six"
+        case 6:
+            return "Six"
             break
-        case 7: return "Seven"
+        case 7:
+            return "Seven"
             break
-        case 8: return "Eight"
+        case 8:
+            return "Eight"
             break
-        case 9: return "Nine"
+        case 9:
+            return "Nine"
             break
-        case 0: return "Zero"
+        case 0:
+            return "Zero"
             break
     }
 }
@@ -1067,10 +1078,10 @@ function findLongest(str) {
 
 
 // -----108-----
-function createArray(number){
+function createArray(number) {
     var newArray = [];
 
-    for(var counter = 1; counter <= number; counter++){
+    for (var counter = 1; counter <= number; counter++) {
         newArray.push(counter);
     }
 
@@ -1079,20 +1090,20 @@ function createArray(number){
 
 
 // -----109-----
-function getAge(inputString){
+function getAge(inputString) {
     return +inputString[0]
 }
 
 
 // -----110-----
-var humanYearsCatYearsDogYears = function(humanYears) {
+var humanYearsCatYearsDogYears = function (humanYears) {
     let catYears = 0;
     let dogYears = 0;
-    if(humanYears === 1) {
+    if (humanYears === 1) {
         return [1, 15, 15]
-    } else if(humanYears === 2) {
+    } else if (humanYears === 2) {
         return [2, 24, 24]
-    } else if (humanYears >=3) {
+    } else if (humanYears >= 3) {
         catYears = 15 + 9 + 4 * (humanYears - 2)
         dogYears = 15 + 9 + 5 * (humanYears - 2)
     }
@@ -1108,28 +1119,32 @@ function multipleOfIndex(array) {
 
 // -----112-----
 function peopleWithAgeDrink(old) {
-    switch(true) {
-        case old < 14: return "drink toddy";
+    switch (true) {
+        case old < 14:
+            return "drink toddy";
             break;
-        case old < 18: return "drink coke";
+        case old < 18:
+            return "drink coke";
             break;
-        case old < 21: return "drink beer";
+        case old < 21:
+            return "drink beer";
             break;
-        default : return "drink whisky";
+        default :
+            return "drink whisky";
             break;
     }
 };
 
 
 // -----113-----
-function orderOperations () {
+function orderOperations() {
     return (2 + 2) * (2 + 2) * 2
 }
 
 
 // -----114-----
 function typeOfSum(a, b) {
-    return typeof(a + b)
+    return typeof (a + b)
 }
 
 
@@ -1148,15 +1163,15 @@ function multiply(a, b) {
 
 
 // -----117-----
-function aspectRatio(x,y){
-    return [Math.ceil(y*16/9), y]
+function aspectRatio(x, y) {
+    return [Math.ceil(y * 16 / 9), y]
 }
 
 
 // -----118-----
 function preFizz(n) {
     const arr = []
-    for(let i = 1; i <= n; i++) {
+    for (let i = 1; i <= n; i++) {
         arr.push(i)
     }
     return arr
@@ -1164,20 +1179,20 @@ function preFizz(n) {
 
 
 // -----119-----
-var replaceDots = function(str) {
+var replaceDots = function (str) {
     return str.replace(/\./g, "-");
 }
 
 
 // -----120-----
-function dutyFree(normPrice, discount, hol){
-    return Math.floor(hol/(normPrice*discount/100))
+function dutyFree(normPrice, discount, hol) {
+    return Math.floor(hol / (normPrice * discount / 100))
 }
 
 
 // -----121-----
-var Ball = function(ballType) {
-    if(ballType) {
+var Ball = function (ballType) {
+    if (ballType) {
         this.ballType = ballType
     } else {
         this.ballType = "regular"
@@ -1186,7 +1201,7 @@ var Ball = function(ballType) {
 
 
 // -----122-----
-function well(x){
+function well(x) {
     const newArr = x.filter(el => el === 'good');
     switch (true) {
         case newArr.length > 2:
@@ -1210,8 +1225,8 @@ function sayHello(name) {
 // -----124-----
 function stringy(size) {
     let str = ""
-    for(let i = 1; i <= size; i++) {
-        if(i % 2 === 0) {
+    for (let i = 1; i <= size; i++) {
+        if (i % 2 === 0) {
             str += "0"
         } else {
             str += "1"
@@ -1222,14 +1237,14 @@ function stringy(size) {
 
 
 // -----125-----
-function nthEven(n){
+function nthEven(n) {
     return n * 2 - 2
 }
 
 
 // -----126-----
 function getSize(width, height, depth) {
-    return[(width * depth + height * depth + width * height ) * 2 , width * height * depth]
+    return [(width * depth + height * depth + width * height) * 2, width * height * depth]
 }
 
 
@@ -1241,14 +1256,14 @@ function noBoringZeros(n) {
 
 
 // -----128-----
-function nameShuffler(str){
+function nameShuffler(str) {
     return str.split(" ").reverse().join(" ")
 }
 
 
 // -----129-----
 var websites = []
-for(let i = 1; i <= 1000; i++) {
+for (let i = 1; i <= 1000; i++) {
     websites.push("codewars")
 }
 
@@ -1260,9 +1275,9 @@ function arrayMadness(a, b) {
 
 
 // -----131-----
-function array(arr){
+function array(arr) {
     const newArr = arr.split(",")
-    if(newArr.length <= 2) {
+    if (newArr.length <= 2) {
         return null
     }
     return newArr.splice(1, newArr.length - 2).join(" ")
@@ -1270,8 +1285,8 @@ function array(arr){
 
 
 // -----132-----
-function reverse(string){
-    return string.split(" ").reverse(). join(" ")
+function reverse(string) {
+    return string.split(" ").reverse().join(" ")
 }
 
 
@@ -1284,13 +1299,13 @@ function addLength(str) {
 
 
 // -----134-----
-function sayHello( name, city, state ) {
+function sayHello(name, city, state) {
     return `Hello, ${name.join(" ")}! Welcome to ${city}, ${state}!`
 }
 
 
 // -----135-----
-function position(letter){
+function position(letter) {
     const alphabetString = "abcdefghijklmnopqrstuvwxyz"
     const alphabetArray = alphabetString.split("")
     return `Position of alphabet: ${(alphabetArray.indexOf(letter) + 1)}`
@@ -1298,9 +1313,9 @@ function position(letter){
 
 
 // -----136-----
-function pipeFix(numbers){
+function pipeFix(numbers) {
     const newArr = [];
-    for(let i = Math.min(...numbers); i <= Math.max(...numbers); i++) {
+    for (let i = Math.min(...numbers); i <= Math.max(...numbers); i++) {
         newArr.push(i)
     }
     return newArr;
@@ -1308,7 +1323,7 @@ function pipeFix(numbers){
 
 
 // -----137-----
-function printArray(array){
+function printArray(array) {
     return array.join(",")
 }
 
@@ -1336,14 +1351,14 @@ var findAverage = function (nums) {
 
 
 // -----142-----
-function include(arr, item){
+function include(arr, item) {
     return arr.includes(item)
 }
 
 
 // -----143-----
 function sakuraFall(v) {
-    if(v <= 0) {
+    if (v <= 0) {
         return 0
     } else {
         return 400 / v
@@ -1363,7 +1378,7 @@ function whatday(num) {
         7: "Saturday",
     }
 
-    if(num < 8 && num > 0) {
+    if (num < 8 && num > 0) {
         return obj[num]
     } else {
         return "Wrong, please enter a number between 1 and 7"
@@ -1374,7 +1389,7 @@ function whatday(num) {
 
 
 // -----145-----
-function odds(values){
+function odds(values) {
     return values.filter(el => el % 2 !== 0);
 }
 
@@ -1393,7 +1408,7 @@ var totalGoals = laLigaGoals + championsLeagueGoals + copaDelReyGoals
 
 
 // -----148-----
-function goals (laLigaGoals, copaDelReyGoals, championsLeagueGoals) {
+function goals(laLigaGoals, copaDelReyGoals, championsLeagueGoals) {
     return laLigaGoals + copaDelReyGoals + championsLeagueGoals
 }
 
@@ -1411,7 +1426,7 @@ function fixTheMeerkat(arr) {
 
 
 // -----151-----
-function move (position, roll) {
+function move(position, roll) {
     return position + roll * 2
 }
 
@@ -1419,7 +1434,7 @@ function move (position, roll) {
 // -----152-----
 const arr = N => {
     const newArr = [];
-    for(let i = 0; i < N; i++) {
+    for (let i = 0; i < N; i++) {
         newArr.push(i)
     }
     return newArr;
@@ -1436,7 +1451,7 @@ function isPalindrome(line) {
 function distinct(a) {
     const resArr = [];
     a.forEach(el => {
-        if(resArr.indexOf(el) < 0) {
+        if (resArr.indexOf(el) < 0) {
             resArr.push(el)
         }
     });
@@ -1445,13 +1460,13 @@ function distinct(a) {
 
 
 // -----155-----
-function main (verb, noun) {
+function main(verb, noun) {
     return verb + noun
 }
 
 
 // -----156-----
-function SubtractSum(n){
+function SubtractSum(n) {
     const fruits = {
         1: "kiwi",
         2: "pear",
@@ -1556,7 +1571,7 @@ function SubtractSum(n){
     }
     const arr = String(n).split("");
     let sum = arr.reduce((acc, el) => acc + +el, 0)
-    if(n - sum > 0 && n - sum < 101) {
+    if (n - sum > 0 && n - sum < 101) {
         return fruits[n - sum]
     } else {
         return SubtractSum(n - sum)
@@ -1565,9 +1580,9 @@ function SubtractSum(n){
 
 
 // -----157-----
-function tripleTrouble(one, two, three){
+function tripleTrouble(one, two, three) {
     let str = "";
-    for(let i = 0; i < one.length; i++) {
+    for (let i = 0; i < one.length; i++) {
         str = str + one[i] + two[i] + three[i]
     }
     return str;
@@ -1577,7 +1592,7 @@ function tripleTrouble(one, two, three){
 // -----158-----
 function squareOrSquareRoot(array) {
     return array.map(el => {
-        if(Math.sqrt(el) - Math.floor(Math.sqrt(el)) === 0 ) {
+        if (Math.sqrt(el) - Math.floor(Math.sqrt(el)) === 0) {
             return Math.sqrt(el)
         } else {
             return Math.pow(el, 2)
@@ -1587,16 +1602,16 @@ function squareOrSquareRoot(array) {
 
 
 // -----159-----
-function differenceInAges(ages){
+function differenceInAges(ages) {
     return [Math.min(...ages), Math.max(...ages), Math.max(...ages) - Math.min(...ages)]
 }
 
 
 // -----160-----
-function lowercaseCount(str){
+function lowercaseCount(str) {
     let count = 0;
-    for(let i = 0; i < str.length; i++) {
-        if(str[i] === str[i].toLowerCase() && /[a-z]/.test(str[i])) {
+    for (let i = 0; i < str.length; i++) {
+        if (str[i] === str[i].toLowerCase() && /[a-z]/.test(str[i])) {
             count++
         }
     }
@@ -1629,8 +1644,8 @@ function grader(score) {
 
 
 // -----162-----
-function validateCode (code) {
-    return  /^[123]/.test(code)
+function validateCode(code) {
+    return /^[123]/.test(code)
 }
 
 
@@ -1643,20 +1658,26 @@ function mystery() {
 
 
 // -----164-----
-function evalObject(value){
+function evalObject(value) {
     var result = 0;
-    switch(value.operation){
-        case'+': result = value.a + value.b;
+    switch (value.operation) {
+        case'+':
+            result = value.a + value.b;
             break;
-        case'-': result = value.a - value.b;
+        case'-':
+            result = value.a - value.b;
             break;
-        case'/': result = value.a / value.b;
+        case'/':
+            result = value.a / value.b;
             break;
-        case'*': result = value.a * value.b;
+        case'*':
+            result = value.a * value.b;
             break;
-        case'%': result = value.a % value.b;
+        case'%':
+            result = value.a % value.b;
             break;
-        case'^': result = Math.pow(value.a, value.b);
+        case'^':
+            result = Math.pow(value.a, value.b);
             break;
     }
     return result;
@@ -1664,29 +1685,30 @@ function evalObject(value){
 
 
 // -----165-----
-function rainAmount(mm){
+function rainAmount(mm) {
     if (mm < 40) {
         return `You need to give your plant ${40 - mm}mm of water`
     } else if (mm >= 40) {
         return "Your plant has had more than enough water for today!"
-    };
+    }
+    ;
 }
 
 
 // -----166-----
-function removeEveryOther(arr){
+function removeEveryOther(arr) {
     return arr.filter((el, index) => index % 2 === 0);
 }
 
 
 // -----167-----
-function derive(coefficient,exponent) {
+function derive(coefficient, exponent) {
     return `${coefficient * exponent}x^${exponent - 1}`
 }
 
 
 // -----168-----
-function animal(obj){
+function animal(obj) {
     return `This ${obj.color} ${obj.name} has ${obj.legs} legs.`
 }
 
@@ -1701,7 +1723,7 @@ function getStatus(isBusy) {
 
 
 // -----170-----
-function joinStrings(string1, string2){
+function joinStrings(string1, string2) {
     return `${string1} ${string2}`
 }
 
@@ -1721,10 +1743,10 @@ function sumSquares(array) {
 // -----173-----
 Math.roundTo = function (number, precision) {
     let num = 1;
-    for(let i = 0; i < precision; i++) {
+    for (let i = 0; i < precision; i++) {
         num *= 10
     }
-    return Math.round(number * num)/num
+    return Math.round(number * num) / num
 }
 
 
@@ -1733,15 +1755,15 @@ function Counter() {
     this.value = 0;
 }
 
-Counter.prototype.increase = function() {
+Counter.prototype.increase = function () {
     return this.value++;
 };
 
-Counter.prototype.getValue = function() {
+Counter.prototype.getValue = function () {
     return this.value;
 };
 
-Counter.prototype.reset = function() {
+Counter.prototype.reset = function () {
     return this.value = 0;
 };
 
@@ -1754,20 +1776,20 @@ function getNumberFromString(s) {
 
 
 // -----176-----
-function checkTheBucket(bucket){
+function checkTheBucket(bucket) {
     return bucket.includes("gold")
 }
 
 
 // -----177-----
-function add(a, b){
-    return a==b
+function add(a, b) {
+    return a == b
 }
 
 
 // -----178-----
 function ensureQuestion(s) {
-    if(/\?$/.test(s)) {
+    if (/\?$/.test(s)) {
         return s
     } else {
         return s + "?"
@@ -1777,7 +1799,7 @@ function ensureQuestion(s) {
 
 // -----179-----
 function sixToast(num) {
-    if(num < 6) {
+    if (num < 6) {
         return 6 - num
     } else if (num > 6) {
         return num - 6
@@ -1787,16 +1809,16 @@ function sixToast(num) {
 
 
 // -----180-----
-function stringClean(s){
+function stringClean(s) {
     return s.replace(/\d/g, "")
 }
 
 
 // -----181-----
-var cubeChecker = function(volume, side){
-    if(side <= 0) {
+var cubeChecker = function (volume, side) {
+    if (side <= 0) {
         return false
-    } else if(Math.pow(side, 3) === volume) {
+    } else if (Math.pow(side, 3) === volume) {
         return true
     }
     return false;
@@ -1804,8 +1826,8 @@ var cubeChecker = function(volume, side){
 
 
 // -----182-----
-function uefaEuro2016(teams, scores){
-    if(scores[0] > scores[1]) {
+function uefaEuro2016(teams, scores) {
+    if (scores[0] > scores[1]) {
         return `At match ${teams[0]} - ${teams[1]}, ${teams[0]} won!`
     } else if (scores[0] < scores[1]) {
         return `At match ${teams[0]} - ${teams[1]}, ${teams[1]} won!`
@@ -1818,15 +1840,15 @@ function uefaEuro2016(teams, scores){
 // -----183-----
 function first(arr, n = 1) {
     const result = [];
-    if(n === 0) {
+    if (n === 0) {
         return result
     } else {
-        if(n < arr.length) {
-            for(let i = 0; i < n; i++) {
+        if (n < arr.length) {
+            for (let i = 0; i < n; i++) {
                 result.push(arr[i])
             }
         } else {
-            for(let i = 0; i < arr.length; i++) {
+            for (let i = 0; i < arr.length; i++) {
                 result.push(arr[i])
             }
         }
@@ -1839,8 +1861,8 @@ function first(arr, n = 1) {
 // -----184-----
 function charFreq(message) {
     const result = {};
-    for(let i = 0; i < message.length; i++) {
-        if(result[message[i]]) {
+    for (let i = 0; i < message.length; i++) {
+        if (result[message[i]]) {
             result[message[i]]++
         } else {
             result[message[i]] = 1
@@ -1851,14 +1873,14 @@ function charFreq(message) {
 
 
 // -----185-----
-function none(arr, fun){
+function none(arr, fun) {
     return !arr.filter(fun).length
 }
 
 
 // -----186-----
 function validateHello(greetings) {
-    res =  /hello|ciao|salut|hallo|hola|ahoj|czesc/gi.test(greetings)
+    res = /hello|ciao|salut|hallo|hola|ahoj|czesc/gi.test(greetings)
     return res
 }
 
@@ -1866,10 +1888,29 @@ function validateHello(greetings) {
 // -----187-----
 Array.prototype.filter = function (func) {
     const arr = [];
-    for(let i = 0; i < this.length; i++) {
-        if(func(this[i])) {
+    for (let i = 0; i < this.length; i++) {
+        if (func(this[i])) {
             arr.push(this[i])
         }
     }
     return arr;
+}
+
+
+// -----188-----
+function mergeArrays(arr1, arr2) {
+    const sumArr = [...arr1, ...arr2]
+    const resultArr = []
+    sumArr.forEach(el => {
+        if(resultArr.indexOf(el) === -1) {
+            resultArr.push(el)
+        }
+    })
+    return resultArr.sort((a, b) => a - b)
+}
+
+
+// -----189-----
+function nearestSq(n){
+    return Math.pow((Math.round(Math.sqrt(n))), 2)
 }
