@@ -1914,3 +1914,16 @@ function mergeArrays(arr1, arr2) {
 function nearestSq(n){
     return Math.pow((Math.round(Math.sqrt(n))), 2)
 }
+
+
+// -----190-----
+function unusualFive() {
+    let str = "aaaaa"
+    return str.length
+}
+
+
+// -----191-----
+function replace(s){
+    return s.replace(/[aeiouAEIOU]/g, "!")
+}
