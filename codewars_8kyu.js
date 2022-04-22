@@ -1927,3 +1927,11 @@ function unusualFive() {
 function replace(s){
     return s.replace(/[aeiouAEIOU]/g, "!")
 }
+
+
+// -----192-----
+function isTriangle(a,b,c) {
+    const args = [...arguments];
+    const arr = args.sort((a,b) => a - b)
+    return (arr[0] + arr[1] > arr[2])
+}
