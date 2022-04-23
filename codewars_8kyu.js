@@ -1935,3 +1935,11 @@ function isTriangle(a,b,c) {
     const arr = args.sort((a,b) => a - b)
     return (arr[0] + arr[1] > arr[2])
 }
+
+
+// -----193-----
+function removeSmallest(numbers) {
+    let min = Math.min(...numbers)
+    let index = numbers.indexOf(min)
+    return numbers.filter((el,ind) => ind !== index)
+}
