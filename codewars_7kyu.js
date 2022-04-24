@@ -910,3 +910,25 @@ const closestMultiple10 = num => {
     let result = Math.round(num/10)*10
     return result;
 };
+
+
+// -----80-----
+function isNarcissistic(n){
+    const nArr = String(n).split("");
+    let result = 0;
+    for(let i = 0; i < nArr.length; i++) {
+        result += Math.pow(+nArr[i], nArr.length)
+    }
+    return n === result
+}
+
+
+// -----81-----
+function solve(s){
+    let uppercase, lowercase, numbers, special;
+    uppercase = s.match(/[A-Z]/g).length
+    lowercase =  s.match(/[a-z]/g).length
+    numbers =  s.match(/\d/g).length
+    special =  s.match(/\W/g).length
+    return [uppercase, lowercase, numbers, special]
+}
