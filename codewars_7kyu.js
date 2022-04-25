@@ -932,3 +932,9 @@ function solve(s){
     special =  s.match(/\W/g).length
     return [uppercase, lowercase, numbers, special]
 }
+
+
+// -----82-----
+function squareAreaToCircle(size){
+    return Math.PI * Math.pow(Math.sqrt(size)/2, 2)
+}
