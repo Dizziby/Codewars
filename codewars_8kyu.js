@@ -1902,7 +1902,7 @@ function mergeArrays(arr1, arr2) {
     const sumArr = [...arr1, ...arr2]
     const resultArr = []
     sumArr.forEach(el => {
-        if(resultArr.indexOf(el) === -1) {
+        if (resultArr.indexOf(el) === -1) {
             resultArr.push(el)
         }
     })
@@ -1911,7 +1911,7 @@ function mergeArrays(arr1, arr2) {
 
 
 // -----189-----
-function nearestSq(n){
+function nearestSq(n) {
     return Math.pow((Math.round(Math.sqrt(n))), 2)
 }
 
@@ -1924,15 +1924,15 @@ function unusualFive() {
 
 
 // -----191-----
-function replace(s){
+function replace(s) {
     return s.replace(/[aeiouAEIOU]/g, "!")
 }
 
 
 // -----192-----
-function isTriangle(a,b,c) {
+function isTriangle(a, b, c) {
     const args = [...arguments];
-    const arr = args.sort((a,b) => a - b)
+    const arr = args.sort((a, b) => a - b)
     return (arr[0] + arr[1] > arr[2])
 }
 
@@ -1941,5 +1941,21 @@ function isTriangle(a,b,c) {
 function removeSmallest(numbers) {
     let min = Math.min(...numbers)
     let index = numbers.indexOf(min)
-    return numbers.filter((el,ind) => ind !== index)
+    return numbers.filter((el, ind) => ind !== index)
 }
+
+
+// -----194-----
+function Dog(breed) {
+    this.breed = breed;
+}
+var snoopy = new Dog("Beagle");
+snoopy.bark = function () {
+    return "Woof";
+};
+var scoobydoo = new Dog("Great Dane")
+scoobydoo.bark = function () {
+    return "Woof";
+};
+
+scoobydoo.bark()
