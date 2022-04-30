@@ -938,3 +938,12 @@ function solve(s){
 function squareAreaToCircle(size){
     return Math.PI * Math.pow(Math.sqrt(size)/2, 2)
 }
+
+
+// -----83-----
+function accum(s) {
+    const arr = s.toLowerCase().split("");
+    const newArr = [];
+    arr.forEach((el, index) => newArr.push(el.toUpperCase() + el.repeat(index)))
+    return newArr.join("-")
+}
