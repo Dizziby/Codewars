@@ -947,3 +947,10 @@ function accum(s) {
     arr.forEach((el, index) => newArr.push(el.toUpperCase() + el.repeat(index)))
     return newArr.join("-")
 }
+
+
+// -----84-----
+var greet = function(name) {
+    let newName = name.replace("!","").replace("Hello", "");
+    return `Hello ${newName[0].toUpperCase() + newName.toLowerCase().slice(1)}!`
+};
