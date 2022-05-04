@@ -1976,3 +1976,12 @@ const cannonsReady = (gunners) => {
 function correct(string) {
     return string.replace(/5/g, "S").replace(/0/g, "O").replace(/1/g, "I")
 }
+
+
+// -----197-----
+var repeatIt = function(str, n) {
+    if(typeof str === "string") {
+        return str.repeat(n)
+    }
+    return "Not a string"
+}
