@@ -954,3 +954,17 @@ var greet = function(name) {
     let newName = name.replace("!","").replace("Hello", "");
     return `Hello ${newName[0].toUpperCase() + newName.toLowerCase().slice(1)}!`
 };
+
+
+// -----85-----
+function solve(s){
+    let regExp = /[aeiou]+/g;
+    let arr = s.match(regExp);
+    let result = 0;
+    for(let i = 0; i < arr.length; i++) {
+        if(result < arr[i].length) {
+            result = arr[i].length
+        }
+    }
+    return result
+}
