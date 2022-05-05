@@ -1985,3 +1985,16 @@ var repeatIt = function(str, n) {
     }
     return "Not a string"
 }
+
+
+// -----198-----
+function numberToPower(number, power){
+    let result = number;
+    if(power === 0) {
+        return 1
+    }
+    for(let i = 0; i < power - 1; i++) {
+        result *= number
+    }
+    return result
+}
