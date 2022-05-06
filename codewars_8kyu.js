@@ -1998,3 +1998,9 @@ function numberToPower(number, power){
     }
     return result
 }
+
+
+// -----199-----
+function combineNames(name, surname) {
+    return `${name} ${surname}`
+}
