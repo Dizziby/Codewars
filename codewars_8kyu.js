@@ -2004,3 +2004,13 @@ function numberToPower(number, power){
 function combineNames(name, surname) {
     return `${name} ${surname}`
 }
+
+
+// -----200-----
+function myFirstKata(a, b) {
+    if (typeof a !== "number" || typeof b !== "number") {
+        return false;
+    } else {
+        return a % b + b % a;
+    }
+}
