@@ -968,3 +968,19 @@ function solve(s){
     }
     return result
 }
+
+
+// -----86-----
+function keysAndValues(data){
+    return[Object.keys(data), Object.values(data)]
+}
+
+
+// -----87-----
+String.prototype.repeat = function(count) {
+    let strRepeat = ""
+    for(let i = 0; i < count; i++) {
+        strRepeat += this
+    }
+    return strRepeat
+};
