@@ -984,3 +984,9 @@ String.prototype.repeat = function(count) {
     }
     return strRepeat
 };
+
+
+// -----88-----
+function sum(array) {
+    return array.reduce((acc, el) => acc + el)
+}
