@@ -2044,3 +2044,10 @@ function equal5(){
     var b=v3   //set number value to b
     return a%b;
 }
+
+
+// -----202-----
+var a = "dev"
+var b = "Lab"
+
+var name = a + b
