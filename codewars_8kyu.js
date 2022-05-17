@@ -2051,3 +2051,9 @@ var a = "dev"
 var b = "Lab"
 
 var name = a + b
+
+
+// -----203-----
+String.prototype.isUpperCase = function() {
+    return this.toUpperCase() == this
+}
