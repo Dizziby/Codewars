@@ -990,3 +990,23 @@ String.prototype.repeat = function(count) {
 function sum(array) {
     return array.reduce((acc, el) => acc + el)
 }
+
+
+// -----89-----
+function tea42(input) {
+    return String(input).replace(/2/g, "t")
+};
+
+
+// -----90-----
+function createDict(keys, values){
+    const obj = {}
+    for(let i = 0; i < keys.length; i++) {
+        if(values[i] === undefined) {
+            obj[keys[i]] = null
+        } else {
+            obj[keys[i]] = values[i]
+        }
+    }
+    return obj
+}
