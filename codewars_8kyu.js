@@ -2057,3 +2057,18 @@ var name = a + b
 String.prototype.isUpperCase = function() {
     return this.toUpperCase() == this
 }
+
+
+// -----204-----
+function doubleInteger(i) {
+    return i*2;
+}
+
+
+// -----205-----
+function sumOfDifferences(arr) {
+    if(arr.length === 0) {
+        return 0
+    }
+    return Math.max(...arr) - Math.min(...arr)
+}
