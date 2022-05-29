@@ -1016,3 +1016,13 @@ function createDict(keys, values){
 function consecutive(arr, a, b) {
     return (arr.indexOf(b) - arr.indexOf(a)) === 1 || (arr.indexOf(b) - arr.indexOf(a)) === -1
 }
+
+
+// -----92-----
+function solution(str, ending){
+    if(str.slice(str.length - ending.length,str.length) === ending) {
+        return true
+    } else {
+        return false
+    }
+}
