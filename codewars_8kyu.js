@@ -2072,3 +2072,13 @@ function sumOfDifferences(arr) {
     }
     return Math.max(...arr) - Math.min(...arr)
 }
+
+
+// -----206-----
+function billboard(name, price = 30){
+    let str = ""
+    for(let i = 0; i < price; i++) {
+        str += name
+    }
+    return str.length
+}
