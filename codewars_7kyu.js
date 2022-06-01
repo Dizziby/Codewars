@@ -1026,3 +1026,20 @@ function solution(str, ending){
         return false
     }
 }
+
+
+// -----93-----
+function last(x){
+    const array = x.split(" ")
+    const sortArray = array.sort((a, b) => {
+        if(a[a.length-1] < b[b.length-1]) {
+            return -1
+        } else  if(a[a.length-1] > b[b.length-1]) {
+            return 1
+        }  else {
+
+        }
+        return 0
+    })
+    return sortArray
+}
