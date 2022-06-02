@@ -1043,3 +1043,13 @@ function last(x){
     })
     return sortArray
 }
+
+
+// -----94-----
+function ghostBusters(building) {
+    if(/ /.test(building)) {
+        return building.replace(/ /g, "")
+    } else {
+        return "You just wanted my autograph didn't you?"
+    }
+}
