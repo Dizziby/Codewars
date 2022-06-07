@@ -1053,3 +1053,10 @@ function ghostBusters(building) {
         return "You just wanted my autograph didn't you?"
     }
 }
+
+
+// -----95-----
+function sumTwoSmallestNumbers(numbers) {
+    const newArray = numbers.filter(el => el > 0).sort((a, b) => a - b)
+    return newArray[0]+newArray[1]
+}
