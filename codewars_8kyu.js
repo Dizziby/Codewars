@@ -2118,3 +2118,13 @@ var rooms = {
 function twoSort(s) {
     return s.sort()[0].split("").join("***")
 }
+
+
+// -----210-----
+function squareSum(numbers){
+    if(numbers.length === 0) {
+        return 0
+    } else {
+        return numbers.map(el => Math.pow(el,2)).reduce((acc, el) => acc + el)
+    }
+}
