@@ -2128,3 +2128,9 @@ function squareSum(numbers){
         return numbers.map(el => Math.pow(el,2)).reduce((acc, el) => acc + el)
     }
 }
+
+
+// -----211-----
+String.prototype.digit = function() {
+    return /^[0-9]$/.test(this);
+};
