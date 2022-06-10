@@ -1060,3 +1060,20 @@ function sumTwoSmallestNumbers(numbers) {
     const newArray = numbers.filter(el => el > 0).sort((a, b) => a - b)
     return newArray[0]+newArray[1]
 }
+
+
+// -----96-----
+function capitalize(s){
+    let one = "";
+    let two = "";
+    for(let i = 0; i < s.length; i++) {
+        if(i % 2 === 0) {
+            one += s[i].toUpperCase()
+            two += s[i].toLowerCase()
+        } else {
+            two += s[i].toUpperCase()
+            one += s[i].toLowerCase()
+        }
+    }
+    return [one, two];
+};
