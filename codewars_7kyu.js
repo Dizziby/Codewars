@@ -1077,3 +1077,17 @@ function capitalize(s){
     }
     return [one, two];
 };
+
+
+// -----97-----
+function alternate(n, firstValue, secondValue){
+    const array = []
+    for(let i = 0; i < n; i++) {
+        if(i % 2 === 0) {
+            array.push(firstValue)
+        } else {
+            array.push(secondValue)
+        }
+    }
+    return array
+}
