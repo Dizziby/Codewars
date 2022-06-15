@@ -775,22 +775,22 @@ function adjacentElementsProduct(array) {
 
 // -----69-----
 function cubeOdd(arr) {
-    for(let i = 0; i < arr.length; i++) {
-        if(typeof arr[i] !== "number") {
+    for (let i = 0; i < arr.length; i++) {
+        if (typeof arr[i] !== "number") {
             return undefined;
         }
     }
-    return arr.filter(el => el % 2 !== 0).reduce((acc, el) => acc + el*el*el, 0)
+    return arr.filter(el => el % 2 !== 0).reduce((acc, el) => acc + el * el * el, 0)
 }
 
 
 // -----70-----
-var isAnagram = function(test, original) {
+var isAnagram = function (test, original) {
     let test2 = test.toLowerCase().split("").sort().join("");
     console.log(test2)
     let original2 = original.toLowerCase().split("").sort().join("");
     console.log(original2)
-    if(test2 === original2) {
+    if (test2 === original2) {
         return true
     } else {
         return false
@@ -802,10 +802,10 @@ var isAnagram = function(test, original) {
 function insertDash(num) {
     const arr = String(num).split("");
     const newArr = [];
-    for(let i = 0; i < arr.length; i++) {
-        if(arr[i] % 2 !== 0 && arr[i+1] % 2 !== 0) {
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] % 2 !== 0 && arr[i + 1] % 2 !== 0) {
             newArr.push(arr[i]);
-            if(i < arr.length - 1) {
+            if (i < arr.length - 1) {
                 newArr.push("-");
             }
         } else {
@@ -817,9 +817,9 @@ function insertDash(num) {
 
 
 // -----72-----
-function removeUrlAnchor(url){
+function removeUrlAnchor(url) {
     let i = url.indexOf("#") || url.length;
-    if(i === -1) {
+    if (i === -1) {
         return url
     } else {
         return url.slice(0, i)
@@ -828,10 +828,10 @@ function removeUrlAnchor(url){
 
 
 // -----73-----
-function factorial(n){
-    if(n === 0) {
+function factorial(n) {
+    if (n === 0) {
         return 1
-    } else if(n === 1) {
+    } else if (n === 1) {
         return n
     } else {
         return factorial(n - 1) * n
@@ -841,7 +841,7 @@ function factorial(n){
 
 // -----74-----
 function isLeapYear(year) {
-    if((year % 4 === 0  && year % 100 !== 0)  || (year % 400 === 0 && year % 100 !== 0) || (year % 400 === 0 && year % 4 === 0)) {
+    if ((year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0 && year % 100 !== 0) || (year % 400 === 0 && year % 4 === 0)) {
         return true
     }
     return false
@@ -849,14 +849,14 @@ function isLeapYear(year) {
 
 
 // -----75-----
-var FilterString = function(value) {
+var FilterString = function (value) {
     const arr = value.match(/\d/g)
     return +arr.join("")
 }
 
 
 // -----76-----
-function unusedDigits(){
+function unusedDigits() {
     let args = [];
     for (let i = 0; i < arguments.length; i++) {
         args[i] = arguments[i];
@@ -864,9 +864,9 @@ function unusedDigits(){
     let integers = "0123456789";
     let stringNumbers = args.join("")
     let result = "";
-    for(let i = 0; i < integers.length; i++) {
+    for (let i = 0; i < integers.length; i++) {
         let regExp = new RegExp(integers[i], "g")
-        if(!regExp.test(stringNumbers)) {
+        if (!regExp.test(stringNumbers)) {
             result += integers[i]
         }
     }
@@ -875,12 +875,12 @@ function unusedDigits(){
 
 
 // -----77-----
-function getMissingElement(superImportantArray){
+function getMissingElement(superImportantArray) {
     let integers = "0123456789";
     let stringNumbers = superImportantArray.join("")
-    for(let i = 0; i < integers.length; i++) {
+    for (let i = 0; i < integers.length; i++) {
         let regExp = new RegExp(integers[i], "g")
-        if(!regExp.test(stringNumbers)) {
+        if (!regExp.test(stringNumbers)) {
             return +integers[i]
         }
     }
@@ -888,13 +888,13 @@ function getMissingElement(superImportantArray){
 
 
 // -----78-----
-var splitInParts = function(s, partLength){
+var splitInParts = function (s, partLength) {
     let array = s.split("");
     const newArray = [];
-    for(let i = 0; i < array.length; i++) {
-        if((i+1) % partLength === 0) {
+    for (let i = 0; i < array.length; i++) {
+        if ((i + 1) % partLength === 0) {
             newArray.push(array[i])
-            if((i+1) !== array.length) {
+            if ((i + 1) !== array.length) {
                 newArray.push(" ")
             }
         } else {
@@ -907,16 +907,16 @@ var splitInParts = function(s, partLength){
 
 // -----79-----
 const closestMultiple10 = num => {
-    let result = Math.round(num/10)*10
+    let result = Math.round(num / 10) * 10
     return result;
 };
 
 
 // -----80-----
-function isNarcissistic(n){
+function isNarcissistic(n) {
     const nArr = String(n).split("");
     let result = 0;
-    for(let i = 0; i < nArr.length; i++) {
+    for (let i = 0; i < nArr.length; i++) {
         result += Math.pow(+nArr[i], nArr.length)
     }
     return n === result
@@ -924,19 +924,19 @@ function isNarcissistic(n){
 
 
 // -----81-----
-function solve(s){
+function solve(s) {
     let uppercase, lowercase, numbers, special;
     uppercase = s.match(/[A-Z]/g).length
-    lowercase =  s.match(/[a-z]/g).length
-    numbers =  s.match(/\d/g).length
-    special =  s.match(/\W/g).length
+    lowercase = s.match(/[a-z]/g).length
+    numbers = s.match(/\d/g).length
+    special = s.match(/\W/g).length
     return [uppercase, lowercase, numbers, special]
 }
 
 
 // -----82-----
-function squareAreaToCircle(size){
-    return Math.PI * Math.pow(Math.sqrt(size)/2, 2)
+function squareAreaToCircle(size) {
+    return Math.PI * Math.pow(Math.sqrt(size) / 2, 2)
 }
 
 
@@ -950,19 +950,19 @@ function accum(s) {
 
 
 // -----84-----
-var greet = function(name) {
-    let newName = name.replace("!","").replace("Hello", "");
+var greet = function (name) {
+    let newName = name.replace("!", "").replace("Hello", "");
     return `Hello ${newName[0].toUpperCase() + newName.toLowerCase().slice(1)}!`
 };
 
 
 // -----85-----
-function solve(s){
+function solve(s) {
     let regExp = /[aeiou]+/g;
     let arr = s.match(regExp);
     let result = 0;
-    for(let i = 0; i < arr.length; i++) {
-        if(result < arr[i].length) {
+    for (let i = 0; i < arr.length; i++) {
+        if (result < arr[i].length) {
             result = arr[i].length
         }
     }
@@ -971,15 +971,15 @@ function solve(s){
 
 
 // -----86-----
-function keysAndValues(data){
-    return[Object.keys(data), Object.values(data)]
+function keysAndValues(data) {
+    return [Object.keys(data), Object.values(data)]
 }
 
 
 // -----87-----
-String.prototype.repeat = function(count) {
+String.prototype.repeat = function (count) {
     let strRepeat = ""
-    for(let i = 0; i < count; i++) {
+    for (let i = 0; i < count; i++) {
         strRepeat += this
     }
     return strRepeat
@@ -999,10 +999,10 @@ function tea42(input) {
 
 
 // -----90-----
-function createDict(keys, values){
+function createDict(keys, values) {
     const obj = {}
-    for(let i = 0; i < keys.length; i++) {
-        if(values[i] === undefined) {
+    for (let i = 0; i < keys.length; i++) {
+        if (values[i] === undefined) {
             obj[keys[i]] = null
         } else {
             obj[keys[i]] = values[i]
@@ -1019,8 +1019,8 @@ function consecutive(arr, a, b) {
 
 
 // -----92-----
-function solution(str, ending){
-    if(str.slice(str.length - ending.length,str.length) === ending) {
+function solution(str, ending) {
+    if (str.slice(str.length - ending.length, str.length) === ending) {
         return true
     } else {
         return false
@@ -1029,14 +1029,14 @@ function solution(str, ending){
 
 
 // -----93-----
-function last(x){
+function last(x) {
     const array = x.split(" ")
     const sortArray = array.sort((a, b) => {
-        if(a[a.length-1] < b[b.length-1]) {
+        if (a[a.length - 1] < b[b.length - 1]) {
             return -1
-        } else  if(a[a.length-1] > b[b.length-1]) {
+        } else if (a[a.length - 1] > b[b.length - 1]) {
             return 1
-        }  else {
+        } else {
 
         }
         return 0
@@ -1047,7 +1047,7 @@ function last(x){
 
 // -----94-----
 function ghostBusters(building) {
-    if(/ /.test(building)) {
+    if (/ /.test(building)) {
         return building.replace(/ /g, "")
     } else {
         return "You just wanted my autograph didn't you?"
@@ -1058,16 +1058,16 @@ function ghostBusters(building) {
 // -----95-----
 function sumTwoSmallestNumbers(numbers) {
     const newArray = numbers.filter(el => el > 0).sort((a, b) => a - b)
-    return newArray[0]+newArray[1]
+    return newArray[0] + newArray[1]
 }
 
 
 // -----96-----
-function capitalize(s){
+function capitalize(s) {
     let one = "";
     let two = "";
-    for(let i = 0; i < s.length; i++) {
-        if(i % 2 === 0) {
+    for (let i = 0; i < s.length; i++) {
+        if (i % 2 === 0) {
             one += s[i].toUpperCase()
             two += s[i].toLowerCase()
         } else {
@@ -1080,10 +1080,10 @@ function capitalize(s){
 
 
 // -----97-----
-function alternate(n, firstValue, secondValue){
+function alternate(n, firstValue, secondValue) {
     const array = []
-    for(let i = 0; i < n; i++) {
-        if(i % 2 === 0) {
+    for (let i = 0; i < n; i++) {
+        if (i % 2 === 0) {
             array.push(firstValue)
         } else {
             array.push(secondValue)
@@ -1096,8 +1096,21 @@ function alternate(n, firstValue, secondValue){
 // -----98-----
 function rowSumOddNumbers(n) {
     let sum = 0;
-    for(let i = n *(n - 1) + 1; i <=  n * (n - 1) + 1 + 2 * (n - 1) ; i += 2) {
+    for (let i = n * (n - 1) + 1; i <= n * (n - 1) + 1 + 2 * (n - 1); i += 2) {
         sum += i
     }
     return sum;
+}
+
+
+// -----99-----
+function remove(string) {
+    const arr = string.split(" ")
+    const newArr = []
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i].match(/[!+]/gi) === null || arr[i].match(/[!+]/gi).length !== 1) {
+            newArr.push(arr[i])
+        }
+    }
+    return newArr.join(" ");
 }
