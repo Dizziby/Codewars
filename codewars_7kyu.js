@@ -1091,3 +1091,13 @@ function alternate(n, firstValue, secondValue){
     }
     return array
 }
+
+
+// -----98-----
+function rowSumOddNumbers(n) {
+    let sum = 0;
+    for(let i = n *(n - 1) + 1; i <=  n * (n - 1) + 1 + 2 * (n - 1) ; i += 2) {
+        sum += i
+    }
+    return sum;
+}
