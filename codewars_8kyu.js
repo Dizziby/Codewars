@@ -2134,3 +2134,19 @@ function squareSum(numbers){
 String.prototype.digit = function() {
     return /^[0-9]$/.test(this);
 };
+
+
+// -----212-----
+function updateLight(current) {
+    switch(current) {
+        case "green":
+            return "yellow";
+            break;
+        case "yellow":
+            return "red";
+            break;
+        case "red":
+            return "green";
+            break;
+    }
+}
