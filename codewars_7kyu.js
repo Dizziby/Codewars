@@ -1114,3 +1114,22 @@ function remove(string) {
     }
     return newArr.join(" ");
 }
+
+
+// -----100-----
+function uncensor(infected, discovered) {
+    if(discovered.length === 0) {
+        return infected
+    }
+    let result = "";
+    let j = 0;
+    for(let i = 0; i < infected.length; i++) {
+        if(infected[i]  === "*") {
+            result += discovered[j]
+            j++;
+        } else {
+            result += infected[i]
+        }
+    }
+    return result;
+}
