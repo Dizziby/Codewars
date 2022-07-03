@@ -1118,13 +1118,13 @@ function remove(string) {
 
 // -----100-----
 function uncensor(infected, discovered) {
-    if(discovered.length === 0) {
+    if (discovered.length === 0) {
         return infected
     }
     let result = "";
     let j = 0;
-    for(let i = 0; i < infected.length; i++) {
-        if(infected[i]  === "*") {
+    for (let i = 0; i < infected.length; i++) {
+        if (infected[i] === "*") {
             result += discovered[j]
             j++;
         } else {
@@ -1132,4 +1132,70 @@ function uncensor(infected, discovered) {
         }
     }
     return result;
+}
+
+
+// -----101-----
+var sortArray = function (value) {
+    return value.split('').sort((c, p) => c - p).join('');
+}
+
+
+// -----102-----
+function checkCoupon(enteredCode, correctCode, currentDate, expirationDate) {
+    const currentDateArray = currentDate.split(" ")
+    const expirationDateArray = expirationDate.split(" ")
+    const month = {
+        January: 1,
+        February: 2,
+        March: 3,
+        April: 4,
+        May: 5,
+        June: 6,
+        July: 7,
+        August: 8,
+        September: 9,
+        October: 10,
+        November: 11,
+        December: 12
+    }
+
+    if (enteredCode === correctCode) {
+        if (Number(currentDateArray[2]) > Number(expirationDateArray[2])) {
+            return false
+        } else if (Number(currentDateArray[2]) < Number(expirationDateArray[2])) {
+            return true
+        } else if (month[currentDateArray[0]] < month[expirationDateArray[0]]) {
+            return true
+        } else if (month[currentDateArray[0]] > month[expirationDateArray[0]]) {
+            return false
+        } else if (Number(currentDateArray[1].slice(0, currentDateArray[1].length - 1)) <= Number(expirationDateArray[1].slice(0, expirationDateArray[1].length - 1))) {
+            return true
+        }
+        return false
+    }
+    return false
+}
+
+
+// -----103-----
+const factorial = n => {
+    if (n === 0) {
+        return 1
+    }
+    if (n === 1) {
+        return n
+    } else {
+        return n * factorial(n - 1)
+    }
+};
+
+
+// -----104-----
+const options = {
+    modifier: 2,
+};
+
+function solution(arr, options) {
+    return arr.map(el => el + 2 * options.modifier)
 }
