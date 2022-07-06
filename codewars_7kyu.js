@@ -1199,3 +1199,16 @@ const options = {
 function solution(arr, options) {
     return arr.map(el => el + 2 * options.modifier)
 }
+
+
+// -----105-----
+function outed(meet, boss){
+    let sum = Object.values(meet).reduce((acc, el) => acc + el, 0)
+    let people = Object.keys(meet).length
+    let result = (sum + meet[boss])/people
+    if(result <= 5) {
+        return 'Get Out Now!'
+    } else {
+        return 'Nice Work Champ!'
+    }
+}
