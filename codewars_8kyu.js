@@ -2156,3 +2156,9 @@ function updateLight(current) {
 function buildString(...template){
     return `I like ${template.join(', ')}!`;
 }
+
+
+// -----214-----
+function correctTail(body, tail) {
+    return body.substr(body.length - tail.length, tail.length) === tail;
+}
