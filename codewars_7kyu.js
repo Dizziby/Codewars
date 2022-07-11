@@ -1212,3 +1212,10 @@ function outed(meet, boss){
         return 'Nice Work Champ!'
     }
 }
+
+
+// -----106-----
+function heron(a, b, c) {
+    let s = (a + b + c)/2
+    return Math.sqrt(s*(s-a)*(s-b)*(s-c));
+}
