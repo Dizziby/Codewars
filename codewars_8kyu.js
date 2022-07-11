@@ -2162,3 +2162,22 @@ function buildString(...template){
 function correctTail(body, tail) {
     return body.substr(body.length - tail.length, tail.length) === tail;
 }
+
+
+// -----215-----
+class Cube {
+    constructor(n) {
+        if(!n) {
+            this.side = 0
+        } else {
+            this.side = Math.abs(n)
+        }
+
+    }
+    getSide() {
+        return this.side;
+    }
+    setSide(n) {
+        this.side = Math.abs(n);
+    }
+}
