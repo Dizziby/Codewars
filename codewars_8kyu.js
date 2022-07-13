@@ -2196,3 +2196,12 @@ function finalGrade (exam, projects) {
     }
     return 0
 }
+
+
+// -----217-----
+const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
+    if(mpg * fuelLeft - distanceToPump >= 0) {
+        return true
+    }
+    return false
+};
