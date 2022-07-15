@@ -2226,3 +2226,10 @@ function sumArray(array) {
     }
     return array.reduce((acc, el) => acc + el, 0) - Math.max(...array) - Math.min(...array)
 }
+
+
+// -----219-----
+function helloWorld() {
+    let str = "Hello World!"
+    console.log(str)
+}
