@@ -2281,11 +2281,25 @@ function getLast(arr){
 function pushElement(arr){
     var el=1;
     arr.push(el)
-
     return arr
 }
 function popElement(arr){
     arr.pop()
-
     return arr
 }
+
+
+// -----222-----
+function multiply(number){
+    let positiveNumber = number
+    if(number < 0) {
+        positiveNumber = number * (-1)
+    }
+    return number * Math.pow(5, String(positiveNumber).length)
+}
+
+
+// -----223-----
+const isReallyNaN = (val) => {
+    return Number.isNaN(val);
+};
