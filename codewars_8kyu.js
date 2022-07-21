@@ -1949,6 +1949,7 @@ function removeSmallest(numbers) {
 function Dog(breed) {
     this.breed = breed;
 }
+
 var snoopy = new Dog("Beagle");
 snoopy.bark = function () {
     return "Woof";
@@ -1963,8 +1964,8 @@ scoobydoo.bark()
 
 // -----195-----
 const cannonsReady = (gunners) => {
-    for(let i in gunners) {
-        if(gunners[i] === "nay") {
+    for (let i in gunners) {
+        if (gunners[i] === "nay") {
             return 'Shiver me timbers!'
         }
     }
@@ -1979,8 +1980,8 @@ function correct(string) {
 
 
 // -----197-----
-var repeatIt = function(str, n) {
-    if(typeof str === "string") {
+var repeatIt = function (str, n) {
+    if (typeof str === "string") {
         return str.repeat(n)
     }
     return "Not a string"
@@ -1988,12 +1989,12 @@ var repeatIt = function(str, n) {
 
 
 // -----198-----
-function numberToPower(number, power){
+function numberToPower(number, power) {
     let result = number;
-    if(power === 0) {
+    if (power === 0) {
         return 1
     }
-    for(let i = 0; i < power - 1; i++) {
+    for (let i = 0; i < power - 1; i++) {
         result *= number
     }
     return result
@@ -2017,32 +2018,38 @@ function myFirstKata(a, b) {
 
 
 // -----201-----
-var v1=50;v2=100,v3=150,v4=200,v5=2,v6=250
-function equal1(){
-    var a=v1
-    var b=v1
-    return a+b;
+var v1 = 50;
+v2 = 100, v3 = 150, v4 = 200, v5 = 2, v6 = 250
+
+function equal1() {
+    var a = v1
+    var b = v1
+    return a + b;
 }
+
 //Please refer to the example above to complete the following functions
-function equal2(){
-    var a=v3   //set number value to a
-    var b=v1   //set number value to b
-    return a-b;
+function equal2() {
+    var a = v3   //set number value to a
+    var b = v1   //set number value to b
+    return a - b;
 }
-function equal3(){
-    var a=v1   //set number value to a
-    var b=v5   //set number value to b
-    return a*b;
+
+function equal3() {
+    var a = v1   //set number value to a
+    var b = v5   //set number value to b
+    return a * b;
 }
-function equal4(){
-    var a=v4   //set number value to a
-    var b=v5   //set number value to b
-    return a/b;
+
+function equal4() {
+    var a = v4   //set number value to a
+    var b = v5   //set number value to b
+    return a / b;
 }
-function equal5(){
-    var a=v6   //set number value to a
-    var b=v3   //set number value to b
-    return a%b;
+
+function equal5() {
+    var a = v6   //set number value to a
+    var b = v3   //set number value to b
+    return a % b;
 }
 
 
@@ -2054,20 +2061,20 @@ var name = a + b
 
 
 // -----203-----
-String.prototype.isUpperCase = function() {
+String.prototype.isUpperCase = function () {
     return this.toUpperCase() == this
 }
 
 
 // -----204-----
 function doubleInteger(i) {
-    return i*2;
+    return i * 2;
 }
 
 
 // -----205-----
 function sumOfDifferences(arr) {
-    if(arr.length === 0) {
+    if (arr.length === 0) {
         return 0
     }
     return Math.max(...arr) - Math.min(...arr)
@@ -2075,9 +2082,9 @@ function sumOfDifferences(arr) {
 
 
 // -----206-----
-function billboard(name, price = 30){
+function billboard(name, price = 30) {
     let str = ""
-    for(let i = 0; i < price; i++) {
+    for (let i = 0; i < price; i++) {
         str += name
     }
     return str.length
@@ -2121,24 +2128,24 @@ function twoSort(s) {
 
 
 // -----210-----
-function squareSum(numbers){
-    if(numbers.length === 0) {
+function squareSum(numbers) {
+    if (numbers.length === 0) {
         return 0
     } else {
-        return numbers.map(el => Math.pow(el,2)).reduce((acc, el) => acc + el)
+        return numbers.map(el => Math.pow(el, 2)).reduce((acc, el) => acc + el)
     }
 }
 
 
 // -----211-----
-String.prototype.digit = function() {
+String.prototype.digit = function () {
     return /^[0-9]$/.test(this);
 };
 
 
 // -----212-----
 function updateLight(current) {
-    switch(current) {
+    switch (current) {
         case "green":
             return "yellow";
             break;
@@ -2153,7 +2160,7 @@ function updateLight(current) {
 
 
 // -----213-----
-function buildString(...template){
+function buildString(...template) {
     return `I like ${template.join(', ')}!`;
 }
 
@@ -2167,16 +2174,18 @@ function correctTail(body, tail) {
 // -----215-----
 class Cube {
     constructor(n) {
-        if(!n) {
+        if (!n) {
             this.side = 0
         } else {
             this.side = Math.abs(n)
         }
 
     }
+
     getSide() {
         return this.side;
     }
+
     setSide(n) {
         this.side = Math.abs(n);
     }
@@ -2184,14 +2193,14 @@ class Cube {
 
 
 // -----216-----
-function finalGrade (exam, projects) {
-    if(exam > 90 || projects > 10) {
+function finalGrade(exam, projects) {
+    if (exam > 90 || projects > 10) {
         return 100
     }
-    if(exam > 75 && projects >= 5) {
+    if (exam > 75 && projects >= 5) {
         return 90
     }
-    if(exam > 50 && projects >= 2) {
+    if (exam > 50 && projects >= 2) {
         return 75
     }
     return 0
@@ -2200,7 +2209,7 @@ function finalGrade (exam, projects) {
 
 // -----217-----
 const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
-    if(mpg * fuelLeft - distanceToPump >= 0) {
+    if (mpg * fuelLeft - distanceToPump >= 0) {
         return true
     }
     return false
@@ -2209,19 +2218,19 @@ const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
 
 // -----218-----
 function sumArray(array) {
-    if(array === null) {
+    if (array === null) {
         return 0
     }
-    if(array === undefined) {
+    if (array === undefined) {
         return 0
     }
-    if(array.length === 0) {
+    if (array.length === 0) {
         return 0
     }
-    if(array.length === 1) {
+    if (array.length === 1) {
         return 0
     }
-    if(array.length === 2) {
+    if (array.length === 2) {
         return 0
     }
     return array.reduce((acc, el) => acc + el, 0) - Math.max(...array) - Math.min(...array)
@@ -2236,63 +2245,73 @@ function helloWorld() {
 
 
 // -----220-----
-var a1="A",a2="a",b1="B",b2="b",c1="C",c2="c",d1="D",d2="d",e1="E",e2="e",n1="N",n2="n"
-function Dad(){
+var a1 = "A", a2 = "a", b1 = "B", b2 = "b", c1 = "C", c2 = "c", d1 = "D", d2 = "d", e1 = "E",
+    e2 = "e", n1 = "N", n2 = "n"
+
+function Dad() {
     //select some variable to combine "Dad"
-    return d1+a2+d2;
+    return d1 + a2 + d2;
 }
-function Bee(){
+
+function Bee() {
     //select some variable to combine "Bee"
-    return b1+e2+e2;
+    return b1 + e2 + e2;
 }
-function banana(){
+
+function banana() {
     //select some variable to combine "banana"
-    return b2+a2+n2+a2+n2+a2;
+    return b2 + a2 + n2 + a2 + n2 + a2;
 }
 
 //answer some questions if you finished works above
-function answer1(){
+function answer1() {
     //the answer should be "yes" or "no"
     return "no";
 }
-function answer2(){
+
+function answer2() {
     //the answer should be "yes" or "no"
     return "no";
 }
-function answer3(){
+
+function answer3() {
     //the answer should be "yes" or "no"
     return "yes";
 }
 
 
 // -----221-----
-function getLength(arr){
+function getLength(arr) {
     //return length of arr
     return arr.length
 }
-function getFirst(arr){
+
+function getFirst(arr) {
     //return the first element of arr
     return arr[0]
 }
-function getLast(arr){
+
+function getLast(arr) {
     //return the last element of arr
     return arr[arr.length - 1]
 }
-function pushElement(arr){
-    var el=1;
+
+function pushElement(arr) {
+    var el = 1;
     arr.push(el)
     return arr
 }
-function popElement(arr){
+
+function popElement(arr) {
     arr.pop()
     return arr
 }
 
 
 // -----222-----
-function multiply(number){
+function multiply(number) {
     let positiveNumber = number
-    if(number < 0) {
+    if (number < 0) {
         positiveNumber = number * (-1)
     }
     return number * Math.pow(5, String(positiveNumber).length)
@@ -2303,3 +2322,21 @@ function multiply(number){
 const isReallyNaN = (val) => {
     return Number.isNaN(val);
 };
+
+
+// -----224-----
+function getMax1() {
+    var max =
+        {
+            name: 'Max Headroom'
+        }
+    return max;
+}
+
+function getMax2() {
+    var max2 =
+        {
+            name: 'Max Headroom'
+        }
+    return max2;
+}
