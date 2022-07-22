@@ -1219,3 +1219,10 @@ function heron(a, b, c) {
     let s = (a + b + c)/2
     return Math.sqrt(s*(s-a)*(s-b)*(s-c));
 }
+
+
+// -----107-----
+function predictAge(age1,age2,age3,age4,age5,age6,age7,age8){
+    const arr = Array.from(arguments)
+    return Math.floor(Math.sqrt(arr.map(el => el * el).reduce((acc, el) => acc + el)) / 2)
+}
