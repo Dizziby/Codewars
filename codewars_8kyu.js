@@ -2340,3 +2340,9 @@ function getMax2() {
         }
     return max2;
 }
+
+
+// -----225-----
+function bigToSmall(arr){
+    return [].concat(...arr).sort((a,b) => b - a).join(">")
+}
