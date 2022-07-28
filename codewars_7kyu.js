@@ -1232,3 +1232,15 @@ function predictAge(age1,age2,age3,age4,age5,age6,age7,age8){
 function reverseList(arr) {
     return arr.reverse()
 }
+
+
+// -----109-----
+function divCon(x){
+    return x.reduce((acc, el) => (typeof el === "number" && Number(el) % 1 === 0) ? acc + el : acc - Number(el), 0)
+}
+
+
+// -----110-----
+function arrowArea(a,b) {
+    return (a * b) / 4
+}
