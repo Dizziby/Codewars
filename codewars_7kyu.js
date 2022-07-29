@@ -1244,3 +1244,14 @@ function divCon(x){
 function arrowArea(a,b) {
     return (a * b) / 4
 }
+
+
+// -----111-----
+function getSumOfDigits(integer) {
+    var sum = 0;
+    var digits =  String(integer).split("");
+    for(var i = 0; i < digits.length; i++) {
+        sum = sum + Number(digits[i]);
+    }
+    return sum;
+}
