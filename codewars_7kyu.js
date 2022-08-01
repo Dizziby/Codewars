@@ -1255,3 +1255,9 @@ function getSumOfDigits(integer) {
     }
     return sum;
 }
+
+
+// -----112-----
+function digits(n) {
+    return String(n).length
+}
