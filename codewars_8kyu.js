@@ -2346,3 +2346,9 @@ function getMax2() {
 function bigToSmall(arr){
     return [].concat(...arr).sort((a,b) => b - a).join(">")
 }
+
+
+// -----226-----
+function checkForFactor (base, factor) {
+    return base % factor === 0
+}
