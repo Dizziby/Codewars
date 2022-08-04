@@ -2352,3 +2352,15 @@ function bigToSmall(arr){
 function checkForFactor (base, factor) {
     return base % factor === 0
 }
+
+
+// -----227-----
+function saleHotdogs(n){
+    if(n<5) {
+        return 100 * n
+    }
+    if(n<10) {
+        return 95 * n
+    }
+    return 90 * n
+}
