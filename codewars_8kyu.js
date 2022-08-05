@@ -2364,3 +2364,12 @@ function saleHotdogs(n){
     }
     return 90 * n
 }
+
+
+// -----228-----
+function mouthSize(animal) {
+    if(animal.toUpperCase() === "ALLIGATOR") {
+        return "small"
+    }
+    return "wide"
+}
