@@ -1261,3 +1261,13 @@ function getSumOfDigits(integer) {
 function digits(n) {
     return String(n).length
 }
+
+
+// -----113-----
+const last = xs => {
+    if(xs.length === 0) {
+        return null
+    } else {
+        return xs[xs.length - 1]
+    }
+}
