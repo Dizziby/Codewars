@@ -1271,3 +1271,9 @@ const last = xs => {
         return xs[xs.length - 1]
     }
 }
+
+
+// -----114-----
+function addBinary(a,b) {
+    return (a + b).toString(2)
+}
