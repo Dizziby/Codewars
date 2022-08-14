@@ -2392,3 +2392,26 @@ function howManydays(month){
             return 31
     }
 }
+
+
+// -----230-----
+function howMuchILoveYou(nbPetals) {
+    const obj = {
+        1: "I love you",
+        2: "a little",
+        3: "a lot",
+        4: "passionately",
+        5: "madly",
+        6: "not at all",
+    }
+    if(nbPetals <= 6) {
+        return obj[nbPetals]
+    } else {
+        const answer = nbPetals - Math.floor(nbPetals/6) * 6
+        if(answer === 0) {
+            return "not at all"
+        } else {
+            return obj[answer]
+        }
+    }
+}
