@@ -1284,7 +1284,7 @@ function fizzbuzz(n)
 {
     const arr = []
     for(let i = 1; i <= n; i++) {
-        if (i % 5 == 0 && i % 3 === 0) {
+        if (i % 5 === 0 && i % 3 === 0) {
             arr.push("FizzBuzz")
         } else if(i % 3 === 0) {
             arr.push("Fizz")
@@ -1295,4 +1295,19 @@ function fizzbuzz(n)
         }
     }
     return arr
+}
+
+
+// -----116-----
+function arithmetic(a, b, operator){
+    switch (operator) {
+        case "add":
+            return a + b
+        case "subtract":
+            return a - b
+        case "multiply":
+            return a * b
+        default:
+            return a / b
+    }
 }
