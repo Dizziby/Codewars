@@ -1321,3 +1321,17 @@ function sumCubes(n){
     }
     return sum
 }
+
+
+// -----118-----
+function likeOrDislike(buttons) {
+    let btn= "Nothing"
+    for(let i = 0; i < buttons.length; i++) {
+        if(buttons[i] === btn) {
+            btn = "Nothing"
+        } else {
+            btn = buttons[i]
+        }
+    }
+    return btn
+}
