@@ -1335,3 +1335,9 @@ function likeOrDislike(buttons) {
     }
     return btn
 }
+
+
+// -----119-----
+function switcheroo(x){
+    return x.replace(/a/ig, "x").replace(/b/ig, "y").replace(/y/ig, "a").replace(/x/ig, "b")
+}
