@@ -1341,3 +1341,10 @@ function likeOrDislike(buttons) {
 function switcheroo(x){
     return x.replace(/a/ig, "x").replace(/b/ig, "y").replace(/y/ig, "a").replace(/x/ig, "b")
 }
+
+
+// -----120-----
+function toAcronym(inp){
+    const arr = inp.split(' ')
+    return arr.reduce((acc, el) => acc + el[0].toUpperCase(), "")
+}
