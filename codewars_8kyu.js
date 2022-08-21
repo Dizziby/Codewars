@@ -2415,3 +2415,15 @@ function howMuchILoveYou(nbPetals) {
         }
     }
 }
+
+
+// -----231-----
+function findMultiples(integer, limit) {
+    const arr = []
+    for(let i = integer; i <= limit; i += integer) {
+        if(i % integer === 0) {
+            arr.push(i)
+        }
+    }
+    return arr
+}
