@@ -2427,3 +2427,9 @@ function findMultiples(integer, limit) {
     }
     return arr
 }
+
+
+// -----232-----
+function toBinary(n){
+    return Number(n.toString(2));
+}
