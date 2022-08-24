@@ -2433,3 +2433,15 @@ function findMultiples(integer, limit) {
 function toBinary(n){
     return Number(n.toString(2));
 }
+
+
+// -----233-----
+function howManyLightsabersDoYouOwn(name = "aaa") {
+    return name === "Zach" ? 18 : 0
+}
+
+
+// -----234-----
+function binToDec(bin){
+    return parseInt(bin, 2)
+}
