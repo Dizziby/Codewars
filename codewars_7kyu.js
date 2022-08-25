@@ -1348,3 +1348,14 @@ function toAcronym(inp){
     const arr = inp.split(' ')
     return arr.reduce((acc, el) => acc + el[0].toUpperCase(), "")
 }
+
+
+// -----121-----
+function inAscOrder(arr) {
+    for(let i = 0; i < arr.length - 1; i++) {
+        if(arr[i] > arr[i+1]) {
+            return false
+        }
+    }
+    return true
+}
