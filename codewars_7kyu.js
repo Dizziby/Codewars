@@ -1359,3 +1359,17 @@ function inAscOrder(arr) {
     }
     return true
 }
+
+
+// -----122-----
+function generateShape(integer){
+    let strOne = ""
+    for (let i = 0; i < integer; i++) {
+        strOne += "+"
+    }
+    let str = strOne
+    for(let i = 1; i< integer; i++) {
+        str += `\n${strOne}`
+    }
+    return str
+}
