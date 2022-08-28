@@ -2445,3 +2445,17 @@ function howManyLightsabersDoYouOwn(name = "aaa") {
 function binToDec(bin){
     return parseInt(bin, 2)
 }
+
+
+// -----235-----
+function toCsvText(array) {
+    let str = ""
+    for(let i = 0; i < array.length; i++) {
+        if(i !== array.length - 1) {
+            str += array[i].join(",") + "\n"
+        } else {
+            str += array[i].join(",")
+        }
+    }
+    return str
+}
