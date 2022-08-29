@@ -1373,3 +1373,15 @@ function generateShape(integer){
     }
     return str
 }
+
+
+// -----123-----
+Array.prototype.remove_ = function(integer_list, values_list){
+    const resultArray = []
+    for(let i = 0; i < integer_list.length; i++) {
+        if(!values_list.includes(integer_list[i])) {
+            resultArray.push(integer_list[i])
+        }
+    }
+    return resultArray
+}
