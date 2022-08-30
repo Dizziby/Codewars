@@ -1385,3 +1385,13 @@ Array.prototype.remove_ = function(integer_list, values_list){
     }
     return resultArray
 }
+
+
+// -----124-----
+function explode(s) {
+    let result = ""
+    for(let i = 0; i < s.length; i++) {
+        result += s[i].repeat(Number(s[i]))
+    }
+    return result;
+}
