@@ -1395,3 +1395,9 @@ function explode(s) {
     }
     return result;
 }
+
+
+// -----125-----
+const binaryArrayToNumber = arr => {
+    return parseInt((arr.join("")), 2)
+}
