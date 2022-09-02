@@ -2459,3 +2459,14 @@ function toCsvText(array) {
     }
     return str
 }
+
+
+// -----236-----
+const flip=(d, a)=>{
+    if(d==="L") {
+        return a.sort((a,b) => b - a)
+    }
+    if(d==="R") {
+        return a.sort((a,b) => a - b)
+    }
+}
