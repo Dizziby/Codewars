@@ -329,3 +329,12 @@ function numberOfPairs(gloves) {
 function arrayDiff(a, b) {
     return a.filter(el => !b.includes(el))
 }
+
+
+// -----21-----
+var countBits = function(n) {
+    let bin = (n).toString(2)
+    const arr = bin.split("")
+    const filterArr = arr.filter(el => el === "1")
+    return filterArr.length
+}
