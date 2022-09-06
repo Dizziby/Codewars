@@ -1401,3 +1401,11 @@ function explode(s) {
 const binaryArrayToNumber = arr => {
     return parseInt((arr.join("")), 2)
 }
+
+
+// -----126-----
+function stantonMeasure(array) {
+    const oneArray = array.filter(el => el === 1)
+    const resultArray = array.filter(el => el === oneArray.length)
+    return resultArray.length
+}
