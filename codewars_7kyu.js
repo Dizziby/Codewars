@@ -1409,3 +1409,26 @@ function stantonMeasure(array) {
     const resultArray = array.filter(el => el === oneArray.length)
     return resultArray.length
 }
+
+
+// -----127-----
+function countingValleys(s) {
+    let count = 0
+    let result = 0
+    let up = true
+    for(let i = 0; i < s.length; i++) {
+        if(s[i] === "U") {
+            result++
+        } else if(s[i] === "D") {
+            result--
+        }
+        if(result < 0 ) {
+            up = false
+        }
+        if(result >= 0 && !up) {
+            count++
+            up = !up
+        }
+    }
+    return count
+}
