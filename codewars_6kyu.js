@@ -338,3 +338,24 @@ var countBits = function(n) {
     const filterArr = arr.filter(el => el === "1")
     return filterArr.length
 }
+
+
+// -----22----
+function duplicateCount(text) {
+    const obj = {}
+    const array = text.split("")
+    let res = 0
+    array.forEach(el => {
+        if (obj.hasOwnProperty(el.toUpperCase())) {
+            obj[el.toUpperCase()]++
+        } else {
+            obj[el.toUpperCase()] = 1
+        }
+    })
+    for (let i in obj) {
+        if (obj[i] > 1) {
+            res++
+        }
+    }
+    return res
+}
