@@ -1432,3 +1432,15 @@ function countingValleys(s) {
     }
     return count
 }
+
+
+// -----128-----
+function chain(input, fs) {
+    let result = fs[0](input)
+    for(let i = 1; i < fs.length; i++) {
+        if(typeof fs[i] === "function") {
+            result = fs[i](result)
+        }
+    }
+    return result
+}
