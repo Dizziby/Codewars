@@ -1444,3 +1444,10 @@ function chain(input, fs) {
     }
     return result
 }
+
+
+// -----129-----
+function modifyMultiply (str,loc,num) {
+    const array = str.split(" ")
+    return array[loc] + ("-" + array[loc]).repeat(num-1)
+}
