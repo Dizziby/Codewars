@@ -1451,3 +1451,15 @@ function modifyMultiply (str,loc,num) {
     const array = str.split(" ")
     return array[loc] + ("-" + array[loc]).repeat(num-1)
 }
+
+
+// -----130-----
+function houseNumbersSum(inputArray) {
+    let result = 0;
+    for(let i = 0; i <inputArray.length; i++) {
+        if(inputArray[i] === 0) {
+            return result
+        }
+        result += inputArray[i]
+    }
+}
