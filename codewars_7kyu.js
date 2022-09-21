@@ -1463,3 +1463,17 @@ function houseNumbersSum(inputArray) {
         result += inputArray[i]
     }
 }
+
+
+// -----131-----
+Array.prototype.reverse = function() {
+    let length = this.length
+    for(let i = length - 1; i >= 0; i--) {
+        console.log(this)
+        this.push(this[i])
+    }
+    for(let i = 0; i < length; i++) {
+        this.shift(this[i])
+    }
+    return this
+};
