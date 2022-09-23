@@ -2481,3 +2481,13 @@ function firstNonConsecutive (arr) {
     }
     return null
 }
+
+
+// -----238-----
+function multiTable(number) {
+    let str = `1 * ${number} = ${number}`
+    for (let i = 2; i <= 10; i++) {
+        str += `\n${i} * ${number} = ${i * number}`
+    }
+    return str
+}
