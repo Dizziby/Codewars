@@ -2491,3 +2491,14 @@ function multiTable(number) {
     }
     return str
 }
+
+
+// -----239-----
+function elevator(left, right, call){
+    const leftLength = Math.abs(call - left)
+    const rightLength = Math.abs(call - right)
+    if (leftLength < rightLength) {
+        return "left"
+    }
+    return "right"
+}
