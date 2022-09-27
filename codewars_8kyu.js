@@ -2502,3 +2502,9 @@ function elevator(left, right, call){
     }
     return "right"
 }
+
+
+// -----240-----
+function check(a,x){
+    return a.includes(x)
+};
