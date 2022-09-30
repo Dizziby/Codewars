@@ -2507,4 +2507,11 @@ function elevator(left, right, call){
 // -----240-----
 function check(a,x){
     return a.includes(x)
-};
+}
+
+
+// -----241-----
+function generateLink(user) {
+    const baseURL = "http://www.codewars.com/users/"
+    return baseURL + encodeURIComponent(user)
+}
