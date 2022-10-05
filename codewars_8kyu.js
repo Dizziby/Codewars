@@ -2527,7 +2527,26 @@ function weatherInfo (temp) {
     }
 }
 
+
+// -----243-----
 function convertToCelsius (temperature) {
     var celsius = (temperature - 32) * (5/9)
     return celsius
+}
+
+
+// -----244-----
+function padIt(str,n){
+    let resultStr = str
+    let i = 0
+    while (i < n) {
+        if(i % 2 ===0) {
+            resultStr = "*" + resultStr
+            i++
+        } else {
+            resultStr = resultStr + "*"
+            i++
+        }
+    }
+    return resultStr
 }
