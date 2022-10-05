@@ -2550,3 +2550,10 @@ function padIt(str,n){
     }
     return resultStr
 }
+
+
+// -----245-----
+function trueOrFalse(val){
+    if (val)    return "true";
+    else     return "false";
+}
