@@ -2343,23 +2343,23 @@ function getMax2() {
 
 
 // -----225-----
-function bigToSmall(arr){
-    return [].concat(...arr).sort((a,b) => b - a).join(">")
+function bigToSmall(arr) {
+    return [].concat(...arr).sort((a, b) => b - a).join(">")
 }
 
 
 // -----226-----
-function checkForFactor (base, factor) {
+function checkForFactor(base, factor) {
     return base % factor === 0
 }
 
 
 // -----227-----
-function saleHotdogs(n){
-    if(n<5) {
+function saleHotdogs(n) {
+    if (n < 5) {
         return 100 * n
     }
-    if(n<10) {
+    if (n < 10) {
         return 95 * n
     }
     return 90 * n
@@ -2368,7 +2368,7 @@ function saleHotdogs(n){
 
 // -----228-----
 function mouthSize(animal) {
-    if(animal.toUpperCase() === "ALLIGATOR") {
+    if (animal.toUpperCase() === "ALLIGATOR") {
         return "small"
     }
     return "wide"
@@ -2376,8 +2376,8 @@ function mouthSize(animal) {
 
 
 // -----229-----
-function howManydays(month){
-    switch (month){
+function howManydays(month) {
+    switch (month) {
         case 4:
             return 30;
         case 6:
@@ -2404,11 +2404,11 @@ function howMuchILoveYou(nbPetals) {
         5: "madly",
         6: "not at all",
     }
-    if(nbPetals <= 6) {
+    if (nbPetals <= 6) {
         return obj[nbPetals]
     } else {
-        const answer = nbPetals - Math.floor(nbPetals/6) * 6
-        if(answer === 0) {
+        const answer = nbPetals - Math.floor(nbPetals / 6) * 6
+        if (answer === 0) {
             return "not at all"
         } else {
             return obj[answer]
@@ -2420,8 +2420,8 @@ function howMuchILoveYou(nbPetals) {
 // -----231-----
 function findMultiples(integer, limit) {
     const arr = []
-    for(let i = integer; i <= limit; i += integer) {
-        if(i % integer === 0) {
+    for (let i = integer; i <= limit; i += integer) {
+        if (i % integer === 0) {
             arr.push(i)
         }
     }
@@ -2430,7 +2430,7 @@ function findMultiples(integer, limit) {
 
 
 // -----232-----
-function toBinary(n){
+function toBinary(n) {
     return Number(n.toString(2));
 }
 
@@ -2442,7 +2442,7 @@ function howManyLightsabersDoYouOwn(name = "aaa") {
 
 
 // -----234-----
-function binToDec(bin){
+function binToDec(bin) {
     return parseInt(bin, 2)
 }
 
@@ -2450,8 +2450,8 @@ function binToDec(bin){
 // -----235-----
 function toCsvText(array) {
     let str = ""
-    for(let i = 0; i < array.length; i++) {
-        if(i !== array.length - 1) {
+    for (let i = 0; i < array.length; i++) {
+        if (i !== array.length - 1) {
             str += array[i].join(",") + "\n"
         } else {
             str += array[i].join(",")
@@ -2462,20 +2462,20 @@ function toCsvText(array) {
 
 
 // -----236-----
-const flip=(d, a)=>{
-    if(d==="L") {
-        return a.sort((a,b) => b - a)
+const flip = (d, a) => {
+    if (d === "L") {
+        return a.sort((a, b) => b - a)
     }
-    if(d==="R") {
-        return a.sort((a,b) => a - b)
+    if (d === "R") {
+        return a.sort((a, b) => a - b)
     }
 }
 
 
 // -----237-----
-function firstNonConsecutive (arr) {
-    for(let i = 1; i < arr.length; i++) {
-        if(arr[i] - arr[i-1] !== 1) {
+function firstNonConsecutive(arr) {
+    for (let i = 1; i < arr.length; i++) {
+        if (arr[i] - arr[i - 1] !== 1) {
             return arr[i]
         }
     }
@@ -2494,7 +2494,7 @@ function multiTable(number) {
 
 
 // -----239-----
-function elevator(left, right, call){
+function elevator(left, right, call) {
     const leftLength = Math.abs(call - left)
     const rightLength = Math.abs(call - right)
     if (leftLength < rightLength) {
@@ -2505,7 +2505,7 @@ function elevator(left, right, call){
 
 
 // -----240-----
-function check(a,x){
+function check(a, x) {
     return a.includes(x)
 }
 
@@ -2518,29 +2518,29 @@ function generateLink(user) {
 
 
 // -----242-----
-function weatherInfo (temp) {
+function weatherInfo(temp) {
     var c = convertToCelsius(temp)
     if (c <= 0) {
         return (c + " is freezing temperature")
-    } else{
+    } else {
         return (c + " is above freezing temperature")
     }
 }
 
 
 // -----243-----
-function convertToCelsius (temperature) {
-    var celsius = (temperature - 32) * (5/9)
+function convertToCelsius(temperature) {
+    var celsius = (temperature - 32) * (5 / 9)
     return celsius
 }
 
 
 // -----244-----
-function padIt(str,n){
+function padIt(str, n) {
     let resultStr = str
     let i = 0
     while (i < n) {
-        if(i % 2 ===0) {
+        if (i % 2 === 0) {
             resultStr = "*" + resultStr
             i++
         } else {
@@ -2553,21 +2553,38 @@ function padIt(str,n){
 
 
 // -----245-----
-function trueOrFalse(val){
-    if (val)    return "true";
-    else     return "false";
+function trueOrFalse(val) {
+    if (val) return "true";
+    else return "false";
 }
 
 
 // -----246-----
-function pickIt(arr){
-    var odd=[],even=[];
-    for(let i = 0; i < arr.length; i++) {
-        if(arr[i] % 2 !== 0) {
+function pickIt(arr) {
+    var odd = [], even = [];
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] % 2 !== 0) {
             odd.push(arr[i])
         } else {
             even.push(arr[i])
         }
     }
-    return [odd,even];
+    return [odd, even];
+}
+
+
+// -----247-----
+function grabDoll(dolls) {
+    var bag = [];
+    for (let i = 0; i < dolls.length; i++) {
+        if (bag.length === 3) {
+            break
+        }
+        if (dolls[i] === "Hello Kitty" || dolls[i] === "Barbie doll") {
+            bag.push(dolls[i])
+        } else {
+            continue
+        }
+    }
+    return bag;
 }
